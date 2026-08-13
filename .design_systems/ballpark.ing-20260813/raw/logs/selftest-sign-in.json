@@ -1,0 +1,1 @@
+{"page":"/sign-in","checks":[{"name":"auth-form","check":"structure.tag","ok":true,"detail":"form"},{"name":"auth-form","check":"css.display","ok":true,"detail":"expect [\"flex\",\"inline-flex\"] actual flex"},{"name":"auth-form","check":"css.color","ok":true,"detail":"expect rgb(250, 250, 250) actual rgb(250, 250, 250) dE=0"}],"passed":3,"failed":0}

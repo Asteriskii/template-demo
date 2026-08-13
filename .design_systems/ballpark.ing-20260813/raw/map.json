@@ -1,0 +1,41 @@
+{
+  "source": "https://www.ballpark.ing/",
+  "extractedAt": "2026-08-13",
+  "discovery": {
+    "method": "playwright link discovery (fallback)",
+    "reason": "No reachable Firecrawl instance (no local server on the usual port, no FIRECRAWL_API_KEY / firecrawl CLI in environment); fell back to crawling internal <a href> links from the homepage per skill's standing fallback rule.",
+    "linksFound": [
+      "https://www.ballpark.ing/",
+      "https://www.ballpark.ing/directory",
+      "https://www.ballpark.ing/pricing",
+      "https://www.ballpark.ing/sign-in",
+      "https://www.ballpark.ing/sign-up"
+    ]
+  },
+  "pagesSampled": [
+    { "path": "/", "role": "home", "confirmedWithUser": true },
+    { "path": "/pricing", "role": "pricing cards", "confirmedWithUser": true },
+    { "path": "/directory", "role": "card grid + filters", "confirmedWithUser": true },
+    { "path": "/sign-in", "role": "auth form", "confirmedWithUser": true },
+    { "path": "/sign-up", "role": "auth form (sampled via screenshot only, sweep skipped as redundant)", "confirmedWithUser": true }
+  ],
+  "theme": {
+    "mode": "single",
+    "reason": "No prefers-color-scheme dependency, no theme toggle in DOM (hasThemeToggle:false, prefersDark:false). Declared CSS color-scheme is 'light' but the true body background is near-black (#111111); the site instead alternates fully-committed dark-canvas and light-paper sections per route/section, documented in DESIGN.md Colors.",
+    "flag": "--theme light (per skill default; does not reflect the site's actual bi-tonal visual language, see DESIGN.md)"
+  },
+  "regime": {
+    "classTokens": 3523,
+    "tailwindDensity": 0.849,
+    "hashedShare": 0,
+    "radix": true,
+    "mui": false,
+    "chakra": false,
+    "antd": false
+  },
+  "componentSweep": {
+    "totalCandidates": 371,
+    "clustersAfterGate": 81,
+    "clustersSkipped": 4
+  }
+}

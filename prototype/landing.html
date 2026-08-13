@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Template Management</title>
+<style>
+  :root{
+    --canvas: #111111;
+    --surface: #f1f1f1;
+    --card: #ffffff;
+    --heading: #0a0a0a;
+    --body-text: rgba(10,10,10,0.55);
+    --body-text-faint: rgba(10,10,10,0.4);
+    --hairline: rgba(10,10,10,0.09);
+    --radius-button: 16px;
+    --radius-card: 20px;
+    --radius-pill: 9999px;
+    --font-display: "Antartica", -apple-system, "Inter", ui-sans-serif, system-ui, "Segoe UI", sans-serif;
+  }
+  *{ box-sizing:border-box; }
+  html, body{ background:var(--surface); }
+  body{
+    margin:0; color:var(--heading);
+    font-family:var(--font-display); -webkit-font-smoothing:antialiased;
+    position:relative;
+  }
+  a{ color:inherit; text-decoration:none; }
+
+  .topbar{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:22px 40px; font-size:13px; color:var(--body-text-faint);
+    position:relative; z-index:1;
+  }
+  .topbar .brand{ color:var(--heading); font-weight:600; }
+  .topbar-right{ display:flex; align-items:center; gap:14px; }
+
+  .lang-toggle{ display:flex; align-items:center; gap:6px; }
+  .lang-btn{
+    font-size:11.5px; font-weight:500; padding:4px 10px; border-radius:var(--radius-pill);
+    border:1px solid var(--hairline); color:var(--body-text-faint); cursor:pointer; background:transparent;
+  }
+  .lang-btn.active{ background:var(--heading); color:var(--surface); border-color:var(--heading); }
+
+  .hero{
+    max-width:760px; margin:0 auto; padding:180px 32px 56px; text-align:center;
+    position:relative; z-index:1;
+  }
+  .hero h1{
+    font-size:56px; line-height:61.6px; font-weight:400; letter-spacing:-1.12px;
+    margin:0 0 20px; color:var(--heading);
+  }
+  .hero h1 .dim{ color:var(--body-text-faint); }
+  .hero-sub{
+    font-size:18px; line-height:23.4px; letter-spacing:-0.36px;
+    color:var(--body-text); max-width:520px; margin:0 auto 24px;
+  }
+  .hero-ctas{ display:flex; gap:8px; justify-content:center; }
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:10px;
+    height:44px; padding:0 24px; border-radius:var(--radius-button);
+    font-family:var(--font-display); cursor:pointer; transition:opacity .3s cubic-bezier(.4,0,.2,1);
+  }
+  .btn:hover{ opacity:.8; }
+  .btn-primary{ background:var(--heading); color:var(--surface); font-size:16px; }
+
+  .pillars-title{
+    max-width:960px; margin:0 auto; padding:0 32px; scroll-margin-top:24px;
+    font-size:28px; font-weight:400; letter-spacing:-0.02em; line-height:1.4;
+    color:var(--heading); text-align:center;
+    position:relative; z-index:1;
+  }
+  .pillars{
+    max-width:960px; margin:0 auto; padding:24px 32px 100px;
+    display:grid; grid-template-columns:repeat(3,1fr); gap:20px;
+    position:relative; z-index:1;
+  }
+  .pillar{
+    background:var(--card); border:1px solid var(--hairline); border-radius:var(--radius-card);
+    box-shadow:0 12px 24px rgba(0,0,0,.08);
+    padding:26px 22px;
+  }
+  .pillar .tag{
+    font-size:11px; color:var(--body-text-faint); text-transform:uppercase; letter-spacing:0.05em;
+    margin-bottom:14px;
+  }
+  .pillar h3{ font-size:17px; font-weight:600; margin:0 0 10px; color:var(--heading); }
+  .pillar p{ font-size:13.5px; color:var(--body-text); line-height:1.6; margin:0; }
+
+  .principle{
+    max-width:760px; margin:0 auto; padding:100px 32px 90px;
+    text-align:center; border-top:1px solid var(--hairline);
+    position:relative; z-index:1;
+  }
+  .principle-title{
+    font-size:12px; font-weight:600; color:var(--body-text-faint);
+    text-transform:uppercase; letter-spacing:0.06em; margin-bottom:14px;
+  }
+  .principle h2{
+    font-size:28px; font-weight:400; letter-spacing:-0.02em; margin:0 0 16px; line-height:1.4;
+    color:var(--heading);
+  }
+  .principle-body{
+    font-size:14px; line-height:1.7; color:var(--body-text);
+    max-width:480px; margin:0 auto 48px;
+  }
+  .principle-list{
+    display:flex; flex-direction:column;
+    max-width:560px; margin:0 auto; text-align:left;
+  }
+  .principle-item{
+    display:flex; gap:24px; align-items:baseline;
+    padding:20px 0; border-top:1px solid var(--hairline);
+  }
+  .principle-item:last-child{ border-bottom:1px solid var(--hairline); }
+  .principle-item .label{
+    flex-shrink:0; width:150px;
+    font-size:14px; font-weight:600; color:var(--heading);
+  }
+  .principle-item .desc{ font-size:13.5px; color:var(--body-text); line-height:1.6; }
+
+  .ux-note{
+    max-width:640px; margin:0 auto 130px; padding:0 32px;
+    text-align:center; font-size:13.5px; color:var(--body-text-faint); line-height:1.7;
+    position:relative; z-index:1;
+  }
+  .ux-note b{ color:var(--body-text); font-weight:500; }
+
+  @media (max-width: 720px){
+    .hero h1{ font-size:36px; line-height:1.2; letter-spacing:-1px; }
+    .pillars{ grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="topbar">
+    <span class="brand" data-i18n="brand">Template Management</span>
+    <div class="topbar-right">
+      <span data-i18n="internalTool">Internal Tool</span>
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" data-lang="zh" onclick="setLang('zh')">中文</button>
+      </div>
+    </div>
+  </div>
+
+  <section class="hero">
+    <h1><span data-i18n="heroLine1">Write less code. Argue less.</span> <span class="dim" data-i18n="heroLine2">Learn less.</span></h1>
+    <p class="hero-sub" data-i18n="heroSub">Get the design right once. Stop redoing it.</p>
+    <div class="hero-ctas">
+      <a href="index.html" class="btn btn-primary" data-i18n="viewTemplates">View templates →</a>
+    </div>
+  </section>
+
+  <div class="pillars-title" id="pillars" data-i18n="whyTitle">Why templates</div>
+  <section class="pillars">
+    <div class="pillar">
+      <div class="tag" data-i18n="forIt">For Engineering</div>
+      <h3 data-i18n="itTitle">Less duplicate code</h3>
+      <p data-i18n="itDesc">Skip rebuilding proven patterns from scratch — spend the saved time on what's actually unique.</p>
+    </div>
+    <div class="pillar">
+      <div class="tag" data-i18n="forBiz">For Business</div>
+      <h3 data-i18n="bizTitle">Faster requirement discussions</h3>
+      <p data-i18n="bizDesc">Everyone points at the same reference, so there's less back-and-forth over who understood what differently.</p>
+    </div>
+    <div class="pillar">
+      <div class="tag" data-i18n="forUser">For Users</div>
+      <h3 data-i18n="userTitle">Lower learning curve</h3>
+      <p data-i18n="userDesc">Similar scenarios look alike — learn one, and you've basically learned the whole category.</p>
+    </div>
+  </section>
+
+  <div class="principle">
+    <div class="principle-title" data-i18n="noMatter">No matter the request</div>
+    <h2 data-i18n="holdsUp">It has to hold up against these</h2>
+    <p class="principle-body" data-i18n="principleBody">This isn't extra process — it's our baseline for our own work. Everything gets checked against these five before it ships, from a single button to a full page.</p>
+    <div class="principle-list">
+      <div class="principle-item">
+        <span class="label">Component Library</span>
+        <span class="desc" data-i18n="p1">Reuse what exists instead of reinventing it every time.</span>
+      </div>
+      <div class="principle-item">
+        <span class="label">Design Patterns</span>
+        <span class="desc" data-i18n="p2">Follow the interaction patterns the team has already settled on, so users don't have to relearn anything.</span>
+      </div>
+      <div class="principle-item">
+        <span class="label">Accessibility</span>
+        <span class="desc" data-i18n="p3">Keyboard, screen readers, color contrast — make sure everyone can use it.</span>
+      </div>
+      <div class="principle-item">
+        <span class="label">Customer Thinking</span>
+        <span class="desc" data-i18n="p4">Understand the user's problem first, then decide how to solve it.</span>
+      </div>
+      <div class="principle-item">
+        <span class="label">Quality</span>
+        <span class="desc" data-i18n="p5">Hold up to scrutiny before shipping — not just "it works."</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="ux-note">
+    <b data-i18n="uxTeam">The UX team</b> <span data-i18n="uxNote">is consolidating similar user journeys into reusable templates — this site is where each template's status, design, and rollout become visible.</span>
+  </div>
+
+<script>
+  let LANG = 'en';
+  const STRINGS = {
+    en: {
+      brand: "Template Management", internalTool: "Internal Tool",
+      heroLine1: "Write less code. Argue less.", heroLine2: "Learn less.",
+      heroSub: "Get the design right once. Stop redoing it.",
+      viewTemplates: "View templates →",
+      whyTitle: "Why templates",
+      forIt: "For Engineering", itTitle: "Less duplicate code",
+      itDesc: "Skip rebuilding proven patterns from scratch — spend the saved time on what's actually unique.",
+      forBiz: "For Business", bizTitle: "Faster requirement discussions",
+      bizDesc: "Everyone points at the same reference, so there's less back-and-forth over who understood what differently.",
+      forUser: "For Users", userTitle: "Lower learning curve",
+      userDesc: "Similar scenarios look alike — learn one, and you've basically learned the whole category.",
+      noMatter: "No matter the request",
+      holdsUp: "It has to hold up against these",
+      principleBody: "This isn't extra process — it's our baseline for our own work. Everything gets checked against these five before it ships, from a single button to a full page.",
+      p1: "Reuse what exists instead of reinventing it every time.",
+      p2: "Follow the interaction patterns the team has already settled on, so users don't have to relearn anything.",
+      p3: "Keyboard, screen readers, color contrast — make sure everyone can use it.",
+      p4: "Understand the user's problem first, then decide how to solve it.",
+      p5: "Hold up to scrutiny before shipping — not just \"it works.\"",
+      uxTeam: "The UX team", uxNote: "is consolidating similar user journeys into reusable templates — this site is where each template's status, design, and rollout become visible."
+    },
+    zh: {
+      brand: "模板管理", internalTool: "内部工具",
+      heroLine1: "少写代码。少吵需求。", heroLine2: "少学界面。",
+      heroSub: "一次做对的设计，不用一次次重来。",
+      viewTemplates: "查看模板 →",
+      whyTitle: "为什么要有 Template",
+      forIt: "对 IT", itTitle: "少写重复代码",
+      itDesc: "相似的场景不用每次从零实现，已经验证过的模式直接复用，把时间花在真正独特的部分上。",
+      forBiz: "对 Business", bizTitle: "需求讨论更快",
+      bizDesc: "大家对着同一套参照物讨论，少了很多“我们各自理解得不一样”的反复拉扯。",
+      forUser: "对 User", userTitle: "学习成本更低",
+      userDesc: "相近的场景长得也像，用户学会一个，等于顺手学会了一整类。",
+      noMatter: "不管做什么需求",
+      holdsUp: "都要经得起这几条",
+      principleBody: "这不是额外的流程，而是我们对自己作品的基本要求——从一个按钮到一整个页面，上线前都对着这五条过一遍。",
+      p1: "复用已有组件，而不是每次重新造轮子。",
+      p2: "遵循团队沉淀下来的交互模式，用户不用重新学习一遍。",
+      p3: "键盘、屏幕阅读器、颜色对比度——确保每个人都能用。",
+      p4: "先想清楚用户要解决的问题，再决定怎么做。",
+      p5: "上线前经得起推敲，而不是“能跑就行”。",
+      uxTeam: "UX 团队", uxNote: "正在把相近的用户旅程收敛成一套可复用的 Template —— 这个小站点，就是每个 Template 的状态、设计和落地情况被看见的地方。"
+    }
+  };
+
+  function setLang(lang){
+    LANG = lang;
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+    const dict = STRINGS[lang];
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.dataset.i18n;
+      if (dict[key] !== undefined) el.textContent = dict[key];
+    });
+    document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+  }
+</script>
+
+</body>
+</html>

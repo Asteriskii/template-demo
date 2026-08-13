@@ -1,0 +1,39 @@
+<!-- button--row-action — extracted from https://www.ballpark.ing/ 2026-08-13 · original bbox 1103,3688,78,37 -->
+<!doctype html>
+<meta charset="utf-8">
+<title>button--row-action</title>
+<style>
+  :root {
+    --contentColor: #f1f1f1;
+  }
+
+  body { margin: 0; padding: 32px; font-family: system-ui, sans-serif; background: var(--color-contentDark); }
+  .dsys-demo { margin-bottom: 40px; }
+  .dsys-demo h2 { font: 600 13px/1 monospace; color: #888; margin: 0 0 12px; }
+  .dsys-row { display: flex; gap: 24px; align-items: flex-start; flex-wrap: wrap; }
+  .dsys-item { max-width: 480px; }
+  .dsys-item--wide { max-width: 100%; flex-basis: 100%; }
+  .dsys-tag { display: block; font: 11px/1 monospace; color: #aaa; margin-bottom: 6px; }
+  .button--row-action {
+    display: flex;
+    align-items: center;
+    gap: normal 8px;
+    padding: 8px 16px;
+    background-color: oklab(0.958141 0.0000436902 0.0000191331 / 0.05);
+    color: var(--contentColor);
+    font-family: Antartica, sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 77.5px;
+    height: 37px;
+    appearance: button;
+  }
+</style>
+<section class="dsys-demo">
+<h2>button--row-action</h2>
+<div class="dsys-row"><div class="dsys-item"><span class="dsys-tag">base</span>
+<button class="button--row-action" data-src-class="py-[8px] px-[16px] flex gap-x-[8px] items-center text-landingLight bg-landingLight/5 w-fit rounded-[6px]">Details</button>
+</div></div>
+</section>

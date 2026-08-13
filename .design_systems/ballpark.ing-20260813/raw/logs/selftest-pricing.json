@@ -1,0 +1,1 @@
+{"page":"/pricing","checks":[{"name":"feature-check-row","check":"structure.tag","ok":true,"detail":"div"},{"name":"feature-check-row","check":"css.display","ok":true,"detail":"expect [\"flex\",\"inline-flex\"] actual flex"},{"name":"feature-check-row","check":"css.color","ok":true,"detail":"expect rgb(250, 250, 250) actual rgb(250, 250, 250) dE=0"}],"passed":3,"failed":0}

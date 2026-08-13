@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Template Management — Concept</title>
+<style>
+  :root{
+    --bg: #f1f1f1;
+    --bg-elevated: #f7f7f7;
+    --bg-card: #ffffff;
+    --bg-hover: #e9e9e9;
+    --fg: #0a0a0a;
+    --fg-muted: rgba(10,10,10,0.55);
+    --fg-faint: rgba(10,10,10,0.4);
+    --border: rgba(10,10,10,0.14);
+    --border-soft: rgba(10,10,10,0.09);
+    --accent: #1f8f68;
+    --accent-soft: rgba(31,143,104,0.12);
+    --amber: #b45309;
+    --amber-soft: rgba(180,83,9,0.12);
+    --gray-badge: rgba(10,10,10,0.06);
+    --radius-sm: 4px;
+    --radius-md: 6px;
+    --radius-lg: 8px;
+    --radius-pill: 999px;
+    --font-sans: "Antartica", -apple-system, "Inter", ui-sans-serif, system-ui, "Segoe UI", sans-serif;
+    --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+
+  *{ box-sizing:border-box; }
+  html,body{ height:100%; }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--fg);
+    font-family:var(--font-sans);
+    -webkit-font-smoothing:antialiased;
+    font-size:14px;
+    line-height:1.5;
+  }
+
+  a{ color:inherit; text-decoration:none; }
+
+  .app{
+    display:flex;
+    height:100vh;
+    overflow:hidden;
+  }
+
+  /* ---------- Sidebar ---------- */
+  .sidebar{
+    width:272px;
+    flex-shrink:0;
+    background:var(--bg-elevated);
+    border-right:1px solid var(--border-soft);
+    display:flex;
+    flex-direction:column;
+    overflow-y:auto;
+  }
+  .sidebar-brand{ padding:16px 18px 0; }
+  .sidebar-brand a{
+    display:inline-flex; align-items:center; gap:6px;
+    font-size:12.5px; font-weight:600; color:var(--fg-muted);
+  }
+  .sidebar-brand a:hover{ color:var(--fg); }
+  .sidebar-brand .back-arrow{ color:var(--fg-faint); font-weight:400; }
+
+  .sidebar-head{
+    padding:14px 18px 12px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .sidebar-title{
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--fg-faint);
+  }
+  .sidebar-add{
+    width:22px; height:22px;
+    display:flex; align-items:center; justify-content:center;
+    border-radius:var(--radius-sm);
+    color:var(--fg-faint);
+    border:1px solid var(--border);
+    font-size:14px;
+    cursor:not-allowed;
+    opacity:0.5;
+  }
+  .sidebar-search{ padding:0 14px 10px; }
+  .sidebar-search input{
+    width:100%; background:var(--bg-card); border:1px solid var(--border-soft);
+    border-radius:var(--radius-sm); color:var(--fg); font-family:var(--font-sans);
+    font-size:12.5px; padding:8px 10px; outline:none;
+  }
+  .sidebar-search input::placeholder{ color:var(--fg-faint); }
+  .sidebar-search input:focus{ border-color:var(--fg-faint); }
+
+  .sidebar-list{ padding:4px 10px; display:flex; flex-direction:column; gap:2px; }
+  .template-item{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:8px;
+    padding:11px 10px;
+    border-radius:var(--radius-md);
+    cursor:pointer;
+    border:1px solid transparent;
+  }
+  .template-item.active{
+    background:var(--bg-card);
+    border-color:var(--border);
+  }
+  .template-item:hover{ background:var(--bg-hover); }
+  .template-item .t-name{ font-weight:500; font-size:13.5px; color:var(--fg); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .template-item.hidden{ display:none; }
+
+  .tpl-status{
+    display:inline-flex; align-items:center; gap:5px; flex-shrink:0;
+    font-size:10.5px; font-weight:500; padding:3px 8px;
+    border-radius:var(--radius-pill);
+  }
+  .tpl-status .dot{ width:5px; height:5px; border-radius:50%; }
+  .tpl-status.live{ background:var(--accent-soft); color:#0f7a4d; }
+  .tpl-status.live .dot{ background:var(--accent); }
+  .tpl-status.inprogress{ background:var(--amber-soft); color:#92400e; }
+  .tpl-status.inprogress .dot{ background:var(--amber); }
+
+  .sidebar-empty-hint{
+    padding:14px 18px 4px;
+    font-size:11.5px;
+    color:var(--fg-faint);
+    line-height:1.6;
+  }
+
+  /* ---------- Main ---------- */
+  .main{ flex:1; overflow-y:auto; position:relative; }
+
+  .topnav{
+    position:sticky; top:0; z-index:20;
+    background:rgba(241,241,241,0.86);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border-soft);
+    display:flex;
+    align-items:center;
+    gap:22px;
+    padding:0 32px;
+    height:52px;
+  }
+  .topnav a{
+    font-size:12.5px;
+    color:var(--fg-faint);
+    padding:6px 2px;
+    border-bottom:2px solid transparent;
+    transition:color .15s;
+  }
+  .topnav a:hover{ color:var(--fg-muted); }
+  .topnav a.active{ color:var(--fg); border-bottom-color:var(--accent); }
+
+  .content{ max-width:860px; margin:0 auto; padding:40px 32px 120px; }
+
+  .page-header{ margin-bottom:44px; }
+  .breadcrumb{ font-size:12px; color:var(--fg-faint); margin-bottom:10px; }
+  .breadcrumb span{ color:var(--fg-muted); }
+  .page-title{ font-size:26px; font-weight:600; letter-spacing:-0.01em; margin:0 0 8px; }
+  .page-oneliner{ font-size:14px; color:var(--fg-muted); max-width:560px; }
+
+  section.block{ margin-bottom:56px; scroll-margin-top:70px; }
+  .block-head{ display:flex; align-items:baseline; justify-content:space-between; margin-bottom:16px; }
+  .block-title{ font-size:13px; font-weight:600; color:var(--fg-muted); text-transform:uppercase; letter-spacing:0.05em; }
+  .block-sub{ font-size:12px; color:var(--fg-faint); }
+
+  /* ---------- Overview ---------- */
+  .overview-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8px;
+  }
+  .info-card{
+    background:var(--bg-card);
+    border:1px solid var(--border-soft);
+    border-radius:var(--radius-md);
+    padding:10px 14px;
+  }
+  .info-card.compact{ padding:9px 14px; }
+  .info-card .label{ font-size:11px; color:var(--fg-faint); margin-bottom:5px; text-transform:uppercase; letter-spacing:0.04em; }
+  .info-card .value{ font-size:13.5px; color:var(--fg); }
+
+  .adoption-row{ display:flex; gap:6px; flex-wrap:wrap; margin-top:2px; }
+  .adoption-pill{
+    display:inline-flex; align-items:center; gap:6px;
+    font-size:11.5px; padding:3px 9px 3px 7px;
+    border-radius:var(--radius-pill);
+    border:1px solid var(--border-soft);
+    background:var(--bg-elevated);
+  }
+  .adoption-pill .status-dot{ width:6px; height:6px; border-radius:50%; }
+  .adoption-pill.adopted .status-dot{ background:var(--accent); }
+  .adoption-pill.evaluating .status-dot{ background:var(--amber); }
+  .adoption-pill.evaluating{ color:var(--fg-muted); }
+
+  /* ---------- User Journeys (flow diagram) ---------- */
+  .status-badge{
+    display:inline-flex; align-items:center; gap:5px;
+    font-size:11px; font-weight:500; padding:3px 9px;
+    border-radius:var(--radius-pill);
+  }
+  .status-badge .dot{ width:6px; height:6px; border-radius:50%; }
+  .status-backlog{ background:var(--gray-badge); color:var(--fg-muted); }
+  .status-backlog .dot{ background:var(--fg-faint); }
+  .status-inprogress{ background:var(--amber-soft); color:#92400e; }
+  .status-inprogress .dot{ background:var(--amber); }
+  .status-implemented{ background:var(--accent-soft); color:#0f7a4d; }
+  .status-implemented .dot{ background:var(--accent); }
+
+  .flow-lanes{ display:flex; flex-direction:column; gap:16px; }
+  .flow-lane{ display:flex; align-items:center; gap:14px; }
+  .flow-lane-label{
+    flex-shrink:0; width:74px;
+    font-size:11px; font-weight:600; color:var(--fg-faint);
+    text-transform:uppercase; letter-spacing:0.04em;
+  }
+  .flow-steps{ display:flex; align-items:center; gap:6px; overflow-x:auto; padding:3px 3px 6px; }
+  .flow-node{
+    display:inline-flex; align-items:center; gap:6px; flex-shrink:0;
+    background:var(--bg-card); border:1px solid var(--border-soft); border-radius:var(--radius-sm);
+    padding:8px 12px; font-size:12.5px; color:var(--fg); white-space:nowrap;
+    cursor:pointer; transition:border-color .15s, background .15s;
+  }
+  .flow-node:hover{ border-color:var(--fg-faint); background:var(--bg-hover); }
+  .flow-node:hover .figma-hint{ color:var(--accent); }
+  .flow-node .figma-hint{ color:var(--fg-faint); font-size:11px; }
+  .flow-node .dot{ width:6px; height:6px; border-radius:50%; flex-shrink:0; }
+  .flow-node.status-implemented .dot{ background:var(--accent); }
+  .flow-node.status-inprogress .dot{ background:var(--amber); }
+  .flow-node.status-backlog .dot{ background:var(--fg-faint); }
+  .flow-action{
+    display:flex; align-items:center; gap:5px; flex-shrink:0;
+    font-size:11px; color:var(--fg-faint); white-space:nowrap;
+  }
+
+  /* ---------- What's New ---------- */
+  .wn-tabs{ display:flex; gap:6px; margin-bottom:14px; flex-wrap:wrap; }
+  .wn-tab{
+    font-size:11.5px; padding:6px 12px; border-radius:var(--radius-pill);
+    background:var(--bg-card); border:1px solid var(--border-soft); color:var(--fg-faint);
+    cursor:pointer;
+  }
+  .wn-tab:hover{ color:var(--fg-muted); }
+  .wn-tab.active{ background:var(--fg); color:var(--bg); border-color:var(--fg); font-weight:500; }
+  .wn-list{ display:flex; flex-direction:column; gap:10px; }
+  .wn-item{
+    background:var(--bg-card); border:1px solid var(--border-soft); border-radius:var(--radius-md);
+    padding:14px 15px;
+  }
+  .wn-item-top{ display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:6px; }
+  .wn-page{ font-size:12px; font-weight:600; color:var(--fg-faint); text-transform:uppercase; letter-spacing:0.03em; }
+  .wn-note{ font-size:13.5px; color:var(--fg); margin-bottom:8px; }
+  .wn-meta{ display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+  .wn-usecase{
+    font-size:11px; color:var(--fg-muted); background:var(--bg-elevated);
+    border:1px solid var(--border-soft); padding:2px 8px; border-radius:var(--radius-pill);
+  }
+  .wn-empty{ font-size:11.5px; color:var(--fg-faint); font-style:italic; padding:8px 2px; }
+
+  /* ---------- Env table ---------- */
+  .env-table{ width:100%; border-collapse:collapse; }
+  .env-table th{
+    text-align:left; font-size:11px; color:var(--fg-faint); font-weight:500;
+    padding:0 12px 8px; text-transform:uppercase; letter-spacing:0.04em;
+  }
+  .env-table td{
+    padding:11px 12px; font-size:13px; border-top:1px solid var(--border-soft);
+    background:var(--bg-card);
+  }
+  .env-table tr td:first-child{ border-radius:var(--radius-sm) 0 0 var(--radius-sm); }
+  .env-table tr td:last-child{ border-radius:0 var(--radius-sm) 0 0; }
+  .env-table a.env-link{ color:var(--fg-muted); font-family:var(--font-mono); font-size:12px; }
+  .env-table a.env-link:hover{ color:var(--accent); }
+  .env-status{
+    display:inline-flex; align-items:center; gap:5px;
+    font-size:11px; font-weight:500; padding:2px 9px; border-radius:var(--radius-pill);
+  }
+  .env-status .dot{ width:5px; height:5px; border-radius:50%; }
+  .env-status.live{ background:var(--accent-soft); color:#0f7a4d; }
+  .env-status.live .dot{ background:var(--accent); }
+  .env-status.legacy{ background:var(--gray-badge); color:var(--fg-muted); }
+  .env-status.legacy .dot{ background:var(--fg-faint); }
+
+  .figma-btn{
+    display:inline-flex; align-items:center; gap:7px;
+    background:var(--fg); color:var(--bg); font-weight:600; font-size:12.5px;
+    padding:8px 14px; border-radius:var(--radius-md); flex-shrink:0;
+  }
+
+  /* ---------- Consistency ---------- */
+  .rule-group{ margin-bottom:16px; }
+  .rule-group:last-child{ margin-bottom:0; }
+  .rule-group .rg-title{ font-size:12.5px; font-weight:500; color:var(--fg); margin-bottom:8px; }
+  .rule-list{ margin:0; padding-left:0; list-style:none; display:flex; flex-direction:column; gap:6px; }
+  .rule-list li{ font-size:12.5px; color:var(--fg-muted); display:flex; gap:8px; }
+  .rule-list li::before{ content:"—"; color:var(--fg-faint); }
+  .diagram-placeholder{
+    margin-top:10px;
+    border:1px dashed var(--border); border-radius:var(--radius-md);
+    background:var(--bg-card);
+    min-height:160px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:12px; color:var(--fg-faint);
+  }
+
+  /* ---------- Language toggle ---------- */
+  .lang-toggle{
+    margin-top:auto; padding:14px 18px; border-top:1px solid var(--border-soft);
+    display:flex; align-items:center; gap:6px;
+  }
+  .lang-btn{
+    font-size:11.5px; font-weight:500; padding:4px 10px; border-radius:var(--radius-pill);
+    border:1px solid var(--border-soft); color:var(--fg-faint); cursor:pointer; background:transparent;
+  }
+  .lang-btn.active{ background:var(--fg); color:var(--bg); border-color:var(--fg); }
+</style>
+</head>
+<body>
+
+<div class="app">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <a href="landing.html"><span class="back-arrow">←</span> <span data-i18n="brand">Template Management</span></a>
+    </div>
+    <div class="sidebar-head">
+      <span class="sidebar-add" title="Add template — not wired up in this concept">+</span>
+    </div>
+    <div class="sidebar-search">
+      <input type="text" id="templateSearch" data-i18n-placeholder="searchPlaceholder" placeholder="Search templates..." />
+    </div>
+    <div class="sidebar-list" id="templateList">
+      <div class="template-item active" data-name="Fish Management">
+        <div class="t-name">🐟 Fish Management</div>
+        <span class="tpl-status live"><span class="dot"></span><span data-i18n="statusLive">Live</span></span>
+      </div>
+      <div class="template-item" data-name="Assumption Management">
+        <div class="t-name">🧩 Assumption Management</div>
+        <span class="tpl-status inprogress"><span class="dot"></span><span data-i18n="statusInProgress">In Progress</span></span>
+      </div>
+    </div>
+    <div class="sidebar-empty-hint" data-i18n="sidebarHint">Reserved for future templates as more get added.</div>
+  </aside>
+
+  <!-- Main -->
+  <main class="main" id="mainScroll">
+    <nav class="topnav" id="topnav">
+      <a href="#overview" class="active" data-i18n="navOverview">Overview</a>
+      <a href="#environments" data-i18n="navEnvironments">Environments</a>
+      <a href="#journeys" data-i18n="navJourneys">User Journeys</a>
+      <a href="#whatsnew" data-i18n="navWhatsNew">What's New</a>
+      <a href="#consistency" data-i18n="navConsistency">Consistency</a>
+      <div class="lang-toggle" style="margin-left:auto;">
+        <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" data-lang="zh" onclick="setLang('zh')">中文</button>
+      </div>
+    </nav>
+
+    <div class="content">
+
+      <div class="page-header">
+        <div class="breadcrumb"><a href="landing.html" style="color:var(--fg-muted);" data-i18n="breadcrumbTemplates">Templates</a> / <span>Fish Management</span></div>
+        <h1 class="page-title">🐟 Fish Management</h1>
+        <p class="page-oneliner" data-i18n="pageOneliner">A reference pattern for record-heavy management pages — list, view, and edit.</p>
+      </div>
+
+      <!-- Overview -->
+      <section class="block" id="overview">
+        <div class="block-head"><span class="block-title" data-i18n="navOverview">Overview</span></div>
+        <div class="overview-grid">
+          <div class="info-card compact" style="grid-column:1 / -1;">
+            <span style="font-size:13px;"><span style="color:var(--fg-faint);" data-i18n="ownerLabel">Owner</span> Jamie Wu <span style="color:var(--fg-faint); font-size:12px;">· Slack #template-management</span></span>
+          </div>
+          <div class="info-card" style="grid-column:1 / -1;">
+            <div class="label" data-i18n="whereAppliesLabel">Where this applies</div>
+            <ul class="rule-list">
+              <li data-i18n="applies1">Other use cases shaped like Fish Management — a clear fit</li>
+              <li data-i18n="applies2">Cases where the table hides more complex data that needs form handling</li>
+            </ul>
+          </div>
+          <div class="info-card compact" style="grid-column:1 / -1; display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+            <span class="label" style="margin-bottom:0;" data-i18n="adoptedByLabel">Adopted by</span>
+            <div class="adoption-row" style="margin-top:0;">
+              <span class="adoption-pill adopted"><span class="status-dot"></span>Aquarium Inventory — <span data-i18n="adopted">Adopted</span></span>
+              <span class="adoption-pill evaluating"><span class="status-dot"></span>Species Tracker — <span data-i18n="evaluating">Evaluating</span></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Environments -->
+      <section class="block" id="environments">
+        <div class="block-head"><span class="block-title" data-i18n="envLinkTitle">Environment Links</span></div>
+        <table class="env-table">
+          <thead>
+            <tr><th data-i18n="envCol">Environment</th><th>Link</th><th data-i18n="statusCol">Status</th></tr>
+          </thead>
+          <tbody id="envTableBody"></tbody>
+        </table>
+      </section>
+
+      <!-- Journeys -->
+      <section class="block" id="journeys">
+        <div class="block-head">
+          <span class="block-title" data-i18n="navJourneys">User Journeys</span>
+          <span class="block-sub" data-i18n="journeysHint">Click a page node to open its Figma design</span>
+        </div>
+        <div class="flow-lanes" id="flowLanes"></div>
+      </section>
+
+      <!-- What's New -->
+      <section class="block" id="whatsnew">
+        <div class="block-head"><span class="block-title" data-i18n="navWhatsNew">What's New</span></div>
+        <div class="wn-tabs" id="wnTabs"></div>
+        <div class="wn-list" id="wnList"></div>
+      </section>
+
+      <!-- Consistency -->
+      <section class="block" id="consistency">
+        <div class="block-head"><span class="block-title" data-i18n="consistencyTitle">Consistency</span></div>
+
+        <div class="rule-group">
+          <div class="rg-title" data-i18n="pageStructureTitle">Page Structure</div>
+          <ul class="rule-list">
+            <li data-i18n="ps1">Top: Breadcrumb</li>
+            <li data-i18n="ps2">Page title</li>
+            <li data-i18n="ps3">Key info block</li>
+            <li data-i18n="ps4">Content area: grouped by Section Headers as needed</li>
+            <li data-i18n="ps5">Bottom: sticky action bar</li>
+          </ul>
+          <div class="diagram-placeholder" data-i18n="diagramPlaceholder">Page structure diagram — TBD</div>
+        </div>
+
+        <div class="rule-group">
+          <div class="rg-title" data-i18n="wordingTitle">Wording</div>
+          <ul class="rule-list">
+            <li data-i18n="wording1">Business terms — vocabulary specific to this template's domain</li>
+            <li data-i18n="wording2">General terms — shared UI vocabulary reused across templates</li>
+          </ul>
+          <div class="diagram-placeholder" data-i18n="wordingPlaceholder">Business term / general term glossary — TBD</div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+</div>
+
+<script>
+  // ---- i18n ----
+  let LANG = 'en';
+  const STRINGS = {
+    en: {
+      brand: "Template Management",
+      navOverview: "Overview", navEnvironments: "Environments", navJourneys: "User Journeys",
+      navWhatsNew: "What's New", navConsistency: "Consistency",
+      breadcrumbTemplates: "Templates",
+      statusLive: "Live", statusInProgress: "In Progress",
+      laneAdd: "Add", laneViewEdit: "View · Edit", laneRemove: "Remove",
+      clickAdd: "Click Add", save: "Save", clickRow: "Click a row", edit: "Edit", clickTrash: "Click 🗑",
+      tabAll: "All related pages",
+      searchPlaceholder: "Search templates...",
+      sidebarHint: "Reserved for future templates as more get added.",
+      pageOneliner: "A reference pattern for record-heavy management pages — list, view, and edit.",
+      ownerLabel: "Owner",
+      whereAppliesLabel: "Where this applies",
+      applies1: "Other use cases shaped like Fish Management — a clear fit",
+      applies2: "Cases where the table hides more complex data that needs form handling",
+      adoptedByLabel: "Adopted by",
+      adopted: "Adopted",
+      evaluating: "Evaluating",
+      envLinkTitle: "Environment Links",
+      envCol: "Environment",
+      statusCol: "Status",
+      journeysHint: "Click a page node to open its Figma design",
+      consistencyTitle: "Consistency",
+      pageStructureTitle: "Page Structure",
+      ps1: "Top: Breadcrumb", ps2: "Page title", ps3: "Key info block",
+      ps4: "Content area: grouped by Section Headers as needed",
+      ps5: "Bottom: sticky action bar",
+      diagramPlaceholder: "Page structure diagram — TBD",
+      wordingTitle: "Wording",
+      wording1: "Business terms — vocabulary specific to this template's domain",
+      wording2: "General terms — shared UI vocabulary reused across templates",
+      wordingPlaceholder: "Business term / general term glossary — TBD",
+      requestedBy: (u) => `Requested by ${u}`,
+      noUpdates: "No updates yet for this page",
+      envLive: "Live", envLegacy: "Legacy"
+    },
+    zh: {
+      brand: "模板管理",
+      navOverview: "概览", navEnvironments: "环境", navJourneys: "用户旅程",
+      navWhatsNew: "最新动态", navConsistency: "一致性规范",
+      breadcrumbTemplates: "模板",
+      statusLive: "已上线", statusInProgress: "进行中",
+      laneAdd: "新建", laneViewEdit: "查看·编辑", laneRemove: "删除",
+      clickAdd: "点击新建", save: "保存", clickRow: "点击某一行", edit: "编辑", clickTrash: "点击 🗑",
+      tabAll: "所有相关页面",
+      searchPlaceholder: "搜索模板...",
+      sidebarHint: "目录位预留，后续多模板接入时可扩展。",
+      pageOneliner: "一套记录密集型管理页面的参考模式 — 列表浏览、详情查看与批量编辑。",
+      ownerLabel: "负责人",
+      whereAppliesLabel: "适用场景",
+      applies1: "其他跟 Fish Management 同构的 use case — 明确适用",
+      applies2: "table 背后挂着更复杂信息、需要表单处理的场景",
+      adoptedByLabel: "被这些 Use Case 采用",
+      adopted: "已采用",
+      evaluating: "评估中",
+      envLinkTitle: "环境 UI Link",
+      envCol: "环境",
+      statusCol: "状态",
+      journeysHint: "点击页面节点查看对应 Figma 设计稿",
+      consistencyTitle: "一致性规范",
+      pageStructureTitle: "页面结构",
+      ps1: "顶部：面包屑（Breadcrumb）", ps2: "页面标题", ps3: "基础信息区块",
+      ps4: "内容区：按需求用 Section Header 分组展示",
+      ps5: "底部：sticky action bar（吸底操作栏）",
+      diagramPlaceholder: "页面结构示意图 — 待补充",
+      wordingTitle: "Wording",
+      wording1: "Business term —— 跟这个模板业务领域相关的专有词汇",
+      wording2: "General term —— 各模板通用、共享的界面词汇",
+      wordingPlaceholder: "Business term / general term 词汇表 — 待补充",
+      requestedBy: (u) => `来自 ${u} 的需求`,
+      noUpdates: "这个页面暂无更新记录",
+      envLive: "上线中", envLegacy: "旧版"
+    }
+  };
+
+  const statusMeta = {
+    backlog:    { label: { en: "Backlog",     zh: "待排期" }, cls: "status-backlog" },
+    inprogress: { label: { en: "In Progress", zh: "进行中" }, cls: "status-inprogress" },
+    implemented:{ label: { en: "Implemented", zh: "已完成" }, cls: "status-implemented" }
+  };
+
+  function statusBadge(status){
+    const m = statusMeta[status];
+    return `<span class="status-badge ${m.cls}"><span class="dot"></span>${m.label[LANG]}</span>`;
+  }
+
+  function applyStaticI18n(){
+    const dict = STRINGS[LANG];
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.dataset.i18n;
+      if (dict[key] !== undefined) el.textContent = dict[key];
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const key = el.dataset.i18nPlaceholder;
+      if (dict[key] !== undefined) el.placeholder = dict[key];
+    });
+  }
+
+  function setLang(lang){
+    LANG = lang;
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+    applyStaticI18n();
+    renderFlowLanes();
+    renderEnvTable();
+    renderWhatsNewTabs();
+    renderWhatsNewList();
+  }
+
+  // ---- User Journeys as flow lanes: each lane is the click-path for one action, ----
+  // starting from the shared entry point (Fish Management, the main list page).
+  const journeyLanes = [
+    {
+      labelKey: "laneAdd",
+      steps: [
+        { type: "page",   name: "Fish Management",       status: "implemented" },
+        { type: "action", key: "clickAdd" },
+        { type: "page",   name: "Create Fish Management", status: "implemented" },
+        { type: "action", key: "save" },
+        { type: "page",   name: "View Fish Management",   status: "implemented" }
+      ]
+    },
+    {
+      labelKey: "laneViewEdit",
+      steps: [
+        { type: "page",   name: "Fish Management", status: "implemented" },
+        { type: "action", key: "clickRow" },
+        { type: "page",   name: "View Fish",       status: "implemented" },
+        { type: "action", key: "edit" },
+        { type: "page",   name: "Edit Fish",       status: "inprogress" },
+        { type: "action", key: "save" },
+        { type: "page",   name: "View Fish",       status: "implemented" }
+      ]
+    },
+    {
+      labelKey: "laneRemove",
+      steps: [
+        { type: "page",   name: "Fish Management", status: "implemented" },
+        { type: "action", key: "clickTrash" }
+      ]
+    }
+  ];
+
+  function renderFlowLanes(){
+    const dict = STRINGS[LANG];
+    const el = document.getElementById('flowLanes');
+    el.innerHTML = journeyLanes.map(lane => `
+      <div class="flow-lane">
+        <div class="flow-lane-label">${dict[lane.labelKey]}</div>
+        <div class="flow-steps">
+          ${lane.steps.map((s, i) => {
+            const arrow = i === 0 ? '' : '<span class="flow-action">→</span>';
+            if (s.type === 'page'){
+              return `${arrow}<a href="#" onclick="return false;" class="flow-node status-${s.status}"><span class="dot"></span>${s.name}<span class="figma-hint">↗</span></a>`;
+            }
+            return `${arrow}<div class="flow-action">${dict[s.key]}</div>`;
+          }).join('')}
+        </div>
+      </div>
+    `).join('');
+  }
+  renderFlowLanes();
+
+  // Env table — status simplified to Live / Legacy
+  const envs = [
+    { name: "Dev",  url: "dev.internal/fish-mgmt",  status: "live" },
+    { name: "SIT",  url: "sit.internal/fish-mgmt",  status: "live" },
+    { name: "UAT",  url: "uat.internal/fish-mgmt",  status: "legacy" },
+    { name: "Prod", url: "fish-mgmt.company.com",   status: "live" }
+  ];
+  function renderEnvTable(){
+    const dict = STRINGS[LANG];
+    const envBody = document.getElementById('envTableBody');
+    envBody.innerHTML = envs.map(e => `
+      <tr>
+        <td>${e.name}</td>
+        <td><a class="env-link" href="#" onclick="return false;">${e.url} ↗</a></td>
+        <td><span class="env-status ${e.status}"><span class="dot"></span>${e.status === 'live' ? dict.envLive : dict.envLegacy}</span></td>
+      </tr>
+    `).join('');
+  }
+  renderEnvTable();
+
+  // What's New — per-page design change feed, tab-filterable
+  const whatsNew = [
+    { page: "Fish Management", note: { en: "Simplified the empty-state copy on the table", zh: "简化了表格空状态的引导文案" }, usecase: "Aquarium Inventory", status: "implemented" },
+    { page: "Create new Fish", note: { en: "Reorganized the form's field grouping", zh: "调整了表单的字段分组" }, usecase: "Species Tracker", status: "implemented" },
+    { page: "Edit Fish",       note: { en: "Added inline validation hints", zh: "新增了内联校验提示" }, usecase: "Aquarium Inventory", status: "inprogress" }
+  ];
+  const ALL_TAB = "__all__";
+  const wnTabsDef = [ALL_TAB, "Fish Management", "Create new Fish", "Edit Fish", "View Fish"];
+  let wnActiveTab = ALL_TAB;
+
+  function renderWhatsNewTabs(){
+    const dict = STRINGS[LANG];
+    const tabsEl = document.getElementById('wnTabs');
+    tabsEl.innerHTML = wnTabsDef.map(t =>
+      `<span class="wn-tab${t === wnActiveTab ? ' active' : ''}" data-tab="${t}">${t === ALL_TAB ? dict.tabAll : t}</span>`
+    ).join('');
+    tabsEl.querySelectorAll('.wn-tab').forEach(el => {
+      el.addEventListener('click', () => {
+        wnActiveTab = el.dataset.tab;
+        renderWhatsNewTabs();
+        renderWhatsNewList();
+      });
+    });
+  }
+
+  function renderWhatsNewList(){
+    const dict = STRINGS[LANG];
+    const listEl = document.getElementById('wnList');
+    const items = wnActiveTab === ALL_TAB
+      ? whatsNew
+      : whatsNew.filter(w => w.page === wnActiveTab);
+    listEl.innerHTML = items.length ? items.map(w => `
+      <div class="wn-item">
+        <div class="wn-item-top">
+          <span class="wn-page">${w.page}</span>
+          ${statusBadge(w.status)}
+        </div>
+        <div class="wn-note">${w.note[LANG]}</div>
+        <div class="wn-meta"><span class="wn-usecase">${dict.requestedBy(w.usecase)}</span></div>
+      </div>
+    `).join('') : `<div class="wn-empty">${dict.noUpdates}</div>`;
+  }
+
+  renderWhatsNewTabs();
+  renderWhatsNewList();
+
+  // Sidebar search — plain client-side name filter
+  document.getElementById('templateSearch').addEventListener('input', (e) => {
+    const q = e.target.value.trim().toLowerCase();
+    document.querySelectorAll('#templateList .template-item').forEach(item => {
+      const match = item.dataset.name.toLowerCase().includes(q);
+      item.classList.toggle('hidden', !match);
+    });
+  });
+
+  // Scroll-spy for the sticky top nav
+  const navLinks = Array.from(document.querySelectorAll('#topnav a'));
+  const sections = navLinks.map(a => document.querySelector(a.getAttribute('href')));
+  const mainEl = document.getElementById('mainScroll');
+  mainEl.addEventListener('scroll', () => {
+    let current = sections[0];
+    for (const s of sections){
+      if (s.getBoundingClientRect().top - 90 <= 0) current = s;
+    }
+    navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current.id));
+  });
+  navLinks.forEach(a => a.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior:'smooth', block:'start' });
+  }));
+</script>
+
+</body>
+</html>

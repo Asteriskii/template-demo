@@ -1,0 +1,52 @@
+<!-- button--primary — extracted from https://www.ballpark.ing/ 2026-08-13 · transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) · original bbox 466,454,170,50 -->
+<!doctype html>
+<meta charset="utf-8">
+<title>button--primary</title>
+<style>
+  :root {
+    --color-landingDark: #0a0a0a;
+    --contentColor: #f1f1f1;
+  }
+
+  body { margin: 0; padding: 32px; font-family: system-ui, sans-serif; background: var(--color-contentDark); }
+  .dsys-demo { margin-bottom: 40px; }
+  .dsys-demo h2 { font: 600 13px/1 monospace; color: #888; margin: 0 0 12px; }
+  .dsys-row { display: flex; gap: 24px; align-items: flex-start; flex-wrap: wrap; }
+  .dsys-item { max-width: 480px; }
+  .dsys-item--wide { max-width: 100%; flex-basis: 100%; }
+  .dsys-tag { display: block; font: 11px/1 monospace; color: #aaa; margin-bottom: 6px; }
+  .button--primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 0px 24px;
+    background-color: var(--color-landingDark);
+    color: var(--contentColor);
+    font-family: Antartica, sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    position: relative;
+    appearance: button;
+  }
+  .button--primary .p1 {
+    display: block;
+    position: relative;
+  }
+  .button--primary.is-hover {
+    opacity: 0.982971;
+  }
+</style>
+<section class="dsys-demo">
+<h2>button--primary</h2>
+<div class="dsys-row"><div class="dsys-item"><span class="dsys-tag">base</span>
+<button class="button--primary" data-src-class="h-[44px] px-[20px] flex items-center justify-center gap-[14px] rounded-[13px] bg-landingDark relative text-landingLight landing-text leading-[100%] transition-opacity duration-300 hover:opacity-80 tex"><span class="p1" data-src-class="relative z-[2]">Add to your site</span></button>
+</div>
+<div class="dsys-item"><span class="dsys-tag">:hover (forced)</span>
+<button class="button--primary is-hover" data-src-class="h-[44px] px-[20px] flex items-center justify-center gap-[14px] rounded-[13px] bg-landingDark relative text-landingLight landing-text leading-[100%] transition-opacity duration-300 hover:opacity-80 tex"><span class="p1" data-src-class="relative z-[2]">Add to your site</span></button>
+</div></div>
+</section>

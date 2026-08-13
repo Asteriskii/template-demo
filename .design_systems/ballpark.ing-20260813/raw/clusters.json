@@ -1,0 +1,4175 @@
+{
+ "meta": {
+  "pages": [
+   {
+    "page": "/",
+    "file": "/Users/wengzhaozhen/Documents/Template demo/.design_systems/ballpark.ing-20260813/raw/candidates/candidates-home.json",
+    "candidates": 234,
+    "kindTotals": {
+     "button": 33,
+     "icon-button": 9,
+     "input": 5,
+     "footer": 1,
+     "accordion": 18
+    }
+   },
+   {
+    "page": "/pricing",
+    "file": "/Users/wengzhaozhen/Documents/Template demo/.design_systems/ballpark.ing-20260813/raw/candidates/candidates-pricing.json",
+    "candidates": 22,
+    "kindTotals": {
+     "button": 3,
+     "footer": 1
+    }
+   },
+   {
+    "page": "/directory",
+    "file": "/Users/wengzhaozhen/Documents/Template demo/.design_systems/ballpark.ing-20260813/raw/candidates/candidates-directory.json",
+    "candidates": 113,
+    "kindTotals": {
+     "button": 14,
+     "footer": 1
+    }
+   },
+   {
+    "page": "/sign-in",
+    "file": "/Users/wengzhaozhen/Documents/Template demo/.design_systems/ballpark.ing-20260813/raw/candidates/candidates-signin.json",
+    "candidates": 2,
+    "kindTotals": {
+     "button": 1,
+     "form": 1
+    }
+   }
+  ],
+  "totalCandidates": 371,
+  "cosThreshold": 0.95
+ },
+ "regime": {
+  "classTokens": 3523,
+  "tailwindDensity": 0.849,
+  "hashedShare": 0,
+  "mui": false,
+  "radix": true,
+  "chakra": false,
+  "antd": false
+ },
+ "gate": {
+  "passed": 81,
+  "skipped": 4
+ },
+ "clusters": [
+  {
+   "kind": "accordion",
+   "hash": "button:span,svg",
+   "instances": 8,
+   "capturedMembers": 6,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "AB"
+   ],
+   "hints": [
+    "text"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "20px 0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "icon": 1,
+    "label": 1,
+    "kids": 2
+   },
+   "representative": {
+    "sel": "#radix-_R_neltlb_",
+    "page": "/",
+    "text": "Will this actually save me time?",
+    "score": 2.5,
+    "bbox": [
+     190,
+     6728,
+     900,
+     64
+    ]
+   },
+   "sampleTexts": [
+    "Will this actually save me time?",
+    "How long does setup really take?",
+    "What happens after the 14-day trial?",
+    "Does it work on my website?",
+    "What if I need help?"
+   ]
+  },
+  {
+   "kind": "accordion",
+   "hash": "div:h3,div",
+   "instances": 6,
+   "capturedMembers": 1,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "AB"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "oklab(0.144787 0.00000661612 0.00000289828 / 0.1)",
+    "borderWidth": "0px 0px 1px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "block",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "icon": 1,
+    "label": 1,
+    "heading": 1,
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > div > section:nth-of-type(5) > div > div > div:nth-of-type(1)",
+    "page": "/",
+    "text": "Will this actually save me time?",
+    "score": -0.5,
+    "bbox": [
+     190,
+     6728,
+     900,
+     65
+    ]
+   },
+   "sampleTexts": [
+    "Will this actually save me time?"
+   ]
+  },
+  {
+   "kind": "accordion",
+   "hash": "h3:button",
+   "instances": 5,
+   "capturedMembers": 5,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "A"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "block",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "icon": 1,
+    "label": 1,
+    "kids": 1
+   },
+   "representative": {
+    "sel": "body > section:nth-of-type(5) > div > div > div:nth-of-type(1) > h3",
+    "page": "/",
+    "text": "Will this actually save me time?",
+    "score": 0.5,
+    "bbox": [
+     190,
+     6728,
+     900,
+     64
+    ]
+   },
+   "sampleTexts": [
+    "Will this actually save me time?",
+    "How long does setup really take?",
+    "What happens after the 14-day trial?",
+    "Does it work on my website?",
+    "What if I need help?"
+   ]
+  },
+  {
+   "kind": "button",
+   "hash": "button:",
+   "instances": 10,
+   "capturedMembers": 10,
+   "pages": [
+    "/",
+    "/pricing"
+   ],
+   "channels": [
+    "A"
+   ],
+   "hints": [
+    "text"
+   ],
+   "style": {
+    "backgroundColor": "oklab(0.958141 0.0000436902 0.0000191331 / 0.05)",
+    "color": "rgb(241, 241, 241)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "6px",
+    "padding": "8px 16px",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "gap": "normal 8px",
+    "letterSpacing": "-0.42px",
+    "transitionProperty": "all",
+    "transitionDuration": "0.15s"
+   },
+   "slots": {
+    "label": 1,
+    "kids": 0
+   },
+   "representative": {
+    "sel": "body > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(4) > button:nth-of-type(1)",
+    "page": "/",
+    "text": "Details",
+    "score": 3.5,
+    "bbox": [
+     1103,
+     3688,
+     78,
+     37
+    ]
+   },
+   "sampleTexts": [
+    "Details",
+    "Sign in"
+   ]
+  },
+  {
+   "kind": "button",
+   "hash": "button:svg",
+   "instances": 10,
+   "capturedMembers": 10,
+   "pages": [
+    "/directory"
+   ],
+   "channels": [
+    "AB",
+    "A"
+   ],
+   "hints": [
+    "text"
+   ],
+   "style": {
+    "backgroundColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.3)",
+    "color": "oklab(0 0 0 / 0.5)",
+    "borderColor": "oklab(0 0 0 / 0.05)",
+    "borderWidth": "1px",
+    "borderStyle": "solid",
+    "borderRadius": "13px",
+    "padding": "10px 12px",
+    "fontSize": "14px",
+    "fontWeight": "520",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "gap": "8px",
+    "letterSpacing": "-0.28px",
+    "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke,"
+   },
+   "slots": {
+    "icon": 1,
+    "label": 1,
+    "kids": 1
+   },
+   "representative": {
+    "sel": "body > div > div:nth-of-type(3) > div > div:nth-of-type(2) > button",
+    "page": "/directory",
+    "text": "Agencies",
+    "score": 3.5,
+    "bbox": [
+     90,
+     612,
+     112,
+     38
+    ]
+   },
+   "sampleTexts": [
+    "Agencies",
+    "Freelancers",
+    "Webflow",
+    "Framer",
+    "Web Design"
+   ]
+  },
+  {
+   "kind": "button",
+   "hash": "button:svg,span",
+   "instances": 9,
+   "capturedMembers": 9,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "AB",
+    "A"
+   ],
+   "hints": [
+    "text"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "lab(95.1451 0 0 / 0.1)",
+    "borderWidth": "1px",
+    "borderStyle": "solid",
+    "borderRadius": "9999px",
+    "padding": "4px 11px",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "gap": "normal 4px",
+    "transitionProperty": "opacity",
+    "transitionDuration": "0.15s"
+   },
+   "slots": {
+    "icon": 1,
+    "label": 1,
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > button",
+    "page": "/",
+    "text": "New",
+    "score": 3.5,
+    "bbox": [
+     871,
+     3687,
+     82,
+     38
+    ]
+   },
+   "sampleTexts": [
+    "New",
+    "To Follow Up",
+    "Contacted",
+    "Project Lost",
+    "Project Won"
+   ]
+  },
+  {
+   "kind": "button",
+   "hash": "button:span,svg",
+   "instances": 8,
+   "capturedMembers": 2,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "AB"
+   ],
+   "hints": [
+    "text",
+    "medium"
+   ],
+   "style": {
+    "backgroundColor": "rgb(48, 48, 48)",
+    "color": "rgb(254, 254, 254)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "9999px",
+    "padding": "10.8px 9px",
+    "fontSize": "14.4px",
+    "fontWeight": "500",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "gap": "normal 4.5px",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "icon": 1,
+    "label": 1,
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > div:nth-of-type(1) > div > article > div:nth-of-type(3) > button",
+    "page": "/",
+    "text": "Get started",
+    "score": 4.5,
+    "bbox": [
+     917,
+     995,
+     288,
+     48
+    ]
+   },
+   "sampleTexts": [
+    "Get started"
+   ]
+  },
+  {
+   "kind": "button",
+   "hash": "button:span",
+   "instances": 6,
+   "capturedMembers": 5,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "AB"
+   ],
+   "hints": [
+    "text"
+   ],
+   "style": {
+    "backgroundColor": "rgb(48, 48, 48)",
+    "color": "rgb(254, 254, 254)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "6px",
+    "padding": "8px 0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "gap": "14px",
+    "transitionProperty": "all",
+    "transitionDuration": "0.3s"
+   },
+   "slots": {
+    "label": 1,
+    "kids": 1
+   },
+   "representative": {
+    "sel": "body > div > section:nth-of-type(1) > div:nth-of-type(2) > a > button",
+    "page": "/",
+    "text": "Add to your site",
+    "score": 4.5,
+    "bbox": [
+     466,
+     454,
+     170,
+     50
+    ]
+   },
+   "sampleTexts": [
+    "Add to your site",
+    "Send",
+    "Submit"
+   ]
+  },
+  {
+   "kind": "button",
+   "hash": "button:",
+   "instances": 3,
+   "capturedMembers": 3,
+   "pages": [
+    "/",
+    "/directory"
+   ],
+   "channels": [
+    "A"
+   ],
+   "hints": [
+    "text"
+   ],
+   "style": {
+    "backgroundColor": "rgb(10, 10, 10)",
+    "color": "rgb(241, 241, 241)",
+    "borderColor": "oklab(0.144787 0.00000661612 0.00000289828 / 0.1)",
+    "borderWidth": "1px",
+    "borderStyle": "solid",
+    "borderRadius": "10px",
+    "padding": "0px 16px",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "gap": "14px",
+    "letterSpacing": "-0.42px",
+    "transitionProperty": "opacity",
+    "transitionDuration": "0.15s"
+   },
+   "slots": {
+    "label": 1,
+    "kids": 0
+   },
+   "representative": {
+    "sel": "body > header > div > div:nth-of-type(1) > a:nth-of-type(4) > button",
+    "page": "/",
+    "text": "Get started",
+    "score": 4.5,
+    "bbox": [
+     729,
+     56,
+     104,
+     38
+    ]
+   },
+   "sampleTexts": [
+    "Get started",
+    "Get started for free"
+   ]
+  },
+  {
+   "kind": "button",
+   "hash": "button:",
+   "instances": 3,
+   "capturedMembers": 3,
+   "pages": [
+    "/",
+    "/directory"
+   ],
+   "channels": [
+    "A"
+   ],
+   "hints": [
+    "text"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(10, 10, 10)",
+    "borderColor": "oklab(0.144787 0.00000661612 0.00000289828 / 0.3)",
+    "borderWidth": "1px",
+    "borderStyle": "solid",
+    "borderRadius": "10px",
+    "padding": "0px 16px",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "block",
+    "gap": "14px",
+    "letterSpacing": "-0.42px",
+    "transitionProperty": "opacity",
+    "transitionDuration": "0.15s"
+   },
+   "slots": {
+    "label": 1,
+    "kids": 0
+   },
+   "representative": {
+    "sel": "body > header > div > div:nth-of-type(1) > a:nth-of-type(3) > button",
+    "page": "/",
+    "text": "Sign in",
+    "score": 3.5,
+    "bbox": [
+     641,
+     56,
+     80,
+     38
+    ]
+   },
+   "sampleTexts": [
+    "Sign in",
+    "See a demo"
+   ]
+  },
+  {
+   "kind": "button",
+   "hash": "button:",
+   "instances": 2,
+   "capturedMembers": 2,
+   "pages": [
+    "/pricing",
+    "/directory"
+   ],
+   "channels": [
+    "A"
+   ],
+   "hints": [
+    "text"
+   ],
+   "style": {
+    "backgroundColor": "rgb(241, 241, 241)",
+    "color": "rgb(10, 10, 10)",
+    "borderColor": "oklab(0.958141 0.0000436902 0.0000191331 / 0.1)",
+    "borderWidth": "1px",
+    "borderStyle": "solid",
+    "borderRadius": "10px",
+    "padding": "0px 16px",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "gap": "8px",
+    "letterSpacing": "-0.42px",
+    "transitionProperty": "opacity",
+    "transitionDuration": "0.15s"
+   },
+   "slots": {
+    "label": 1,
+    "kids": 0
+   },
+   "representative": {
+    "sel": "body > header > div > div:nth-of-type(1) > a:nth-of-type(4) > button",
+    "page": "/pricing",
+    "text": "Get started",
+    "score": 4.5,
+    "bbox": [
+     729,
+     56,
+     104,
+     38
+    ]
+   },
+   "sampleTexts": [
+    "Get started",
+    "All"
+   ]
+  },
+  {
+   "kind": "footer",
+   "hash": "footer:div,div",
+   "instances": 2,
+   "capturedMembers": 2,
+   "pages": [
+    "/directory",
+    "/"
+   ],
+   "channels": [
+    "A"
+   ],
+   "style": {
+    "backgroundColor": "rgb(241, 241, 241)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "240px 0px 32px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "block",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "media": 1,
+    "label": 1,
+    "body": 1,
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > main > div > div > footer",
+    "page": "/directory",
+    "text": "Ballpark is designed, built, and backed ",
+    "score": 0.5,
+    "bbox": [
+     0,
+     7351,
+     1280,
+     832
+    ]
+   },
+   "sampleTexts": [
+    "Ballpark is designed, built, and backed "
+   ]
+  },
+  {
+   "kind": "footer",
+   "hash": "footer:div,div",
+   "instances": 1,
+   "capturedMembers": 1,
+   "pages": [
+    "/pricing"
+   ],
+   "channels": [
+    "A"
+   ],
+   "style": {
+    "backgroundColor": "rgb(15, 15, 15)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "240px 0px 32px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Geist",
+    "display": "block",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "media": 1,
+    "label": 1,
+    "body": 1,
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > main > main > footer",
+    "page": "/pricing",
+    "text": "Ballpark is designed, built, and backed ",
+    "score": 0,
+    "bbox": [
+     0,
+     1117,
+     1280,
+     832
+    ]
+   },
+   "sampleTexts": [
+    "Ballpark is designed, built, and backed "
+   ]
+  },
+  {
+   "kind": "form",
+   "hash": "form:div,div",
+   "instances": 1,
+   "capturedMembers": 1,
+   "pages": [
+    "/sign-in"
+   ],
+   "channels": [
+    "A"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Geist",
+    "display": "flex",
+    "gap": "24px normal",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "icon": 1,
+    "label": 1,
+    "heading": 1,
+    "body": 1,
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > main > div > div > div > form:nth-of-type(1)",
+    "page": "/sign-in",
+    "text": "Welcome to BallparkDon't have an account",
+    "score": 0,
+    "bbox": [
+     459,
+     235,
+     362,
+     151
+    ]
+   },
+   "sampleTexts": [
+    "Welcome to BallparkDon't have an account"
+   ]
+  },
+  {
+   "kind": "icon-button",
+   "hash": "button:svg",
+   "instances": 10,
+   "capturedMembers": 9,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "AB",
+    "A"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "block",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "icon": 1,
+    "kids": 1
+   },
+   "representative": {
+    "sel": "body > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(4) > button:nth-of-type(2)",
+    "page": "/",
+    "score": 2,
+    "bbox": [
+     1200,
+     3688,
+     18,
+     37
+    ]
+   },
+   "sampleTexts": []
+  },
+  {
+   "kind": "input",
+   "hash": "input:",
+   "instances": 4,
+   "capturedMembers": 4,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "A"
+   ],
+   "hints": [
+    "text",
+    "sm",
+    "medium",
+    "outline",
+    "md"
+   ],
+   "style": {
+    "backgroundColor": "oklab(0.958141 0.0000436902 0.0000191331 / 0.03)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "6px",
+    "padding": "8px",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "kids": 0
+   },
+   "representative": {
+    "sel": "body > div:nth-of-type(3) > label:nth-of-type(1) > div > div > input",
+    "page": "/",
+    "score": 2.5,
+    "bbox": [
+     915,
+     1424,
+     40,
+     40
+    ]
+   },
+   "sampleTexts": []
+  },
+  {
+   "kind": "input",
+   "hash": "textarea:",
+   "instances": 1,
+   "capturedMembers": 1,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "A"
+   ],
+   "hints": [
+    "md",
+    "text",
+    "sm"
+   ],
+   "style": {
+    "backgroundColor": "oklab(0.958141 0.0000436902 0.0000191331 / 0.03)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "1px",
+    "borderStyle": "solid",
+    "borderRadius": "6px",
+    "padding": "8px 12px",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "label": 1,
+    "kids": 0
+   },
+   "representative": {
+    "sel": "#entryMessage",
+    "page": "/",
+    "text": "Looking for an estimated price for your ",
+    "score": 2.5,
+    "bbox": [
+     915,
+     1304,
+     291,
+     80
+    ]
+   },
+   "sampleTexts": [
+    "Looking for an estimated price for your "
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:svg",
+   "instances": 78,
+   "capturedMembers": 11,
+   "pages": [
+    "/directory",
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "hints": [
+    "text"
+   ],
+   "style": {
+    "backgroundColor": "rgb(247, 247, 247)",
+    "color": "oklab(0 0 0 / 0.5)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "6px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke,",
+    "transitionDuration": "0.2s"
+   },
+   "slots": {
+    "icon": 1,
+    "kids": 1
+   },
+   "representative": {
+    "sel": "body > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1)",
+    "page": "/directory",
+    "score": 1.5,
+    "bbox": [
+     480,
+     1211,
+     32,
+     32
+    ]
+   },
+   "sampleTexts": []
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:span",
+   "instances": 78,
+   "capturedMembers": 8,
+   "pages": [
+    "/directory"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "label": 1,
+    "kids": 1
+   },
+   "representative": {
+    "sel": "body > div > div:nth-of-type(2) > div:nth-of-type(1) > div > div:nth-of-type(1)",
+    "page": "/directory",
+    "text": "Agency",
+    "score": 1,
+    "bbox": [
+     488,
+     1178,
+     65,
+     30
+    ]
+   },
+   "sampleTexts": [
+    "Agency",
+    "Web Design",
+    "Branding",
+    "Marketing",
+    "Freelancer"
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:div,div",
+   "instances": 66,
+   "capturedMembers": 3,
+   "pages": [
+    "/directory"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgb(247, 247, 247)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "24px",
+    "padding": "80px 56px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "block",
+    "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke,",
+    "transitionDuration": "0.15s"
+   },
+   "slots": {
+    "media": 1,
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > div:nth-of-type(3) > div > div:nth-of-type(1) > a > div",
+    "page": "/directory",
+    "score": 1.5,
+    "bbox": [
+     32,
+     675,
+     600,
+     526
+    ]
+   },
+   "sampleTexts": []
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:div,div",
+   "instances": 66,
+   "capturedMembers": 12,
+   "pages": [
+    "/",
+    "/directory"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "gap": "10px",
+    "transitionProperty": "all",
+    "transitionDuration": "0.25s"
+   },
+   "slots": {
+    "icon": 1,
+    "label": 1,
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div",
+    "page": "/",
+    "text": "Over-StimulatedBallpark Pro",
+    "score": 1,
+    "bbox": [
+     69,
+     811,
+     163,
+     49
+    ]
+   },
+   "sampleTexts": [
+    "Over-StimulatedBallpark Pro",
+    "Design + BuildDesign only",
+    "AgencyWeb DesignBrandingMarketing",
+    "FreelancerWebflowWeb Design",
+    "I keep getting ghoste..Widget Builder | "
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:div",
+   "instances": 30,
+   "capturedMembers": 1,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgb(254, 254, 254)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "20px 0px 0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "block",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "label": 1,
+    "kids": 1
+   },
+   "representative": {
+    "sel": "#first-input > div",
+    "page": "/",
+    "text": "Design onlyDesign + BuildSend",
+    "score": 2,
+    "bbox": [
+     879,
+     1535,
+     331,
+     97
+    ]
+   },
+   "sampleTexts": [
+    "Design onlyDesign + BuildSend"
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:div",
+   "instances": 30,
+   "capturedMembers": 14,
+   "pages": [
+    "/",
+    "/directory"
+   ],
+   "channels": [
+    "B"
+   ],
+   "hints": [
+    "text"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "block",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "icon": 1,
+    "label": 1,
+    "kids": 1
+   },
+   "representative": {
+    "sel": "body > div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2)",
+    "page": "/",
+    "text": "Will Thomsonwill@over-stimulated.com",
+    "score": 1.5,
+    "bbox": [
+     53,
+     1226,
+     250,
+     52
+    ]
+   },
+   "sampleTexts": [
+    "Will Thomsonwill@over-stimulated.com",
+    "Over-StimulatedBallpark Pro",
+    "AgencyWeb DesignBrandingMarketing",
+    "FreelancerWebflowWeb Design",
+    "EcommerceAgency"
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:div",
+   "instances": 30,
+   "capturedMembers": 1,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgb(23, 23, 23)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "oklab(0.958141 0.0000436902 0.0000191331 / 0.1)",
+    "borderWidth": "1px",
+    "borderStyle": "solid",
+    "borderRadius": "30px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "block",
+    "transitionProperty": "opacity",
+    "transitionDuration": "0.25s"
+   },
+   "slots": {
+    "media": 1,
+    "label": 1,
+    "heading": 1,
+    "body": 1,
+    "kids": 1
+   },
+   "representative": {
+    "sel": "body > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div:nth-of-type(2)",
+    "page": "/",
+    "text": "Design + BuildDesign onlyProject TypeSTA",
+    "score": 1.5,
+    "bbox": [
+     319,
+     787,
+     559,
+     507
+    ]
+   },
+   "sampleTexts": [
+    "Design + BuildDesign onlyProject TypeSTA"
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:div,div",
+   "instances": 26,
+   "capturedMembers": 1,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgb(20, 20, 20)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "oklab(0.958141 0.0000436902 0.0000191331 / 0.1)",
+    "borderWidth": "1px",
+    "borderStyle": "solid",
+    "borderRadius": "30px",
+    "padding": "20px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "block",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "icon": 1,
+    "label": 1,
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > div:nth-of-type(1) > div > div:nth-of-type(3) > div:nth-of-type(2) > div",
+    "page": "/",
+    "text": "Design Your WidgetCustomize the look and",
+    "score": 1.5,
+    "bbox": [
+     894,
+     1115,
+     333,
+     438
+    ]
+   },
+   "sampleTexts": [
+    "Design Your WidgetCustomize the look and"
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:p,p",
+   "instances": 22,
+   "capturedMembers": 8,
+   "pages": [
+    "/directory"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "2px 0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "block",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "label": 1,
+    "body": 1,
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > div:nth-of-type(3) > div > div:nth-of-type(1) > div > div:nth-of-type(1)",
+    "page": "/directory",
+    "text": "Dsquared MediaGraphic Design, Web Design",
+    "score": 0,
+    "bbox": [
+     32,
+     1211,
+     438,
+     39
+    ]
+   },
+   "sampleTexts": [
+    "Dsquared MediaGraphic Design, Web Design",
+    "KoysorWeb Designer and Webflow developer",
+    "Plentiful CommerceStrategic Shopify Stor",
+    "Beetle BeetleBuild credibility with larg",
+    "Elliott ManghamAn experienced website de"
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:svg",
+   "instances": 21,
+   "capturedMembers": 4,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "gap": "normal 7px",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "icon": 1,
+    "kids": 1
+   },
+   "representative": {
+    "sel": "body > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div > div:nth-of-type(1)",
+    "page": "/",
+    "score": 0.5,
+    "bbox": [
+     69,
+     811,
+     49,
+     49
+    ]
+   },
+   "sampleTexts": []
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:svg",
+   "instances": 21,
+   "capturedMembers": 1,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(10, 10, 10)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "9999px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "icon": 1,
+    "kids": 1
+   },
+   "representative": {
+    "sel": "body > section:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-type(2) > h6:nth-of-type(2) > div",
+    "page": "/",
+    "score": 0,
+    "bbox": [
+     732,
+     5804,
+     24,
+     24
+    ]
+   },
+   "sampleTexts": []
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:a,div",
+   "instances": 21,
+   "capturedMembers": 8,
+   "pages": [
+    "/directory"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "block",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "media": 1,
+    "label": 1,
+    "body": 1,
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > div > div > div:nth-of-type(3) > div > div:nth-of-type(1)",
+    "page": "/directory",
+    "text": "Dsquared MediaGraphic Design, Web Design",
+    "score": 0,
+    "bbox": [
+     32,
+     675,
+     600,
+     585
+    ]
+   },
+   "sampleTexts": [
+    "Dsquared MediaGraphic Design, Web Design",
+    "KoysorWeb Designer and Webflow developer",
+    "Plentiful CommerceStrategic Shopify Stor",
+    "Beetle BeetleBuild credibility with larg",
+    "Elliott ManghamAn experienced website de"
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "a:div",
+   "instances": 21,
+   "capturedMembers": 8,
+   "pages": [
+    "/directory"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "block",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "media": 1,
+    "kids": 1
+   },
+   "representative": {
+    "sel": "body > div > div:nth-of-type(3) > div > div:nth-of-type(1) > a",
+    "page": "/directory",
+    "score": 2,
+    "bbox": [
+     32,
+     675,
+     600,
+     526
+    ]
+   },
+   "sampleTexts": []
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:div,svg",
+   "instances": 21,
+   "capturedMembers": 8,
+   "pages": [
+    "/directory"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "9999px",
+    "padding": "12px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "block",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "icon": 1,
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > div > div:nth-of-type(1) > a > div > div:nth-of-type(2)",
+    "page": "/directory",
+    "score": 0.5,
+    "bbox": [
+     577,
+     690,
+     40,
+     40
+    ]
+   },
+   "sampleTexts": []
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:div,div,div,div",
+   "instances": 20,
+   "capturedMembers": 14,
+   "pages": [
+    "/",
+    "/directory"
+   ],
+   "channels": [
+    "B"
+   ],
+   "hints": [
+    "text"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "gap": "8px",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "icon": 1,
+    "label": 1,
+    "heading": 1,
+    "kids": 4
+   },
+   "representative": {
+    "sel": "body > article > div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1)",
+    "page": "/",
+    "text": "EmailStatusPriceAction",
+    "score": 1,
+    "bbox": [
+     686,
+     3651,
+     532,
+     24
+    ]
+   },
+   "sampleTexts": [
+    "EmailStatusPriceAction",
+    "sarah@designstudio.coNew$8,200Details",
+    "DashboardWidget BuilderPricing rulesEmai",
+    "Project TypeSTARTWhat type of project do",
+    "Design onlyDesign + BuildSend6SendASAP ("
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:div,div,div,div",
+   "instances": 20,
+   "capturedMembers": 1,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "hints": [
+    "text"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(10, 10, 10)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "gap": "normal 4px",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "icon": 1,
+    "label": 1,
+    "kids": 4
+   },
+   "representative": {
+    "sel": "body > div:nth-of-type(4) > div > div > div:nth-of-type(1) > div:nth-of-type(2)",
+    "page": "/",
+    "text": "I keep getting ghoste..Widget Builder | ",
+    "score": 0,
+    "bbox": [
+     125,
+     682,
+     831,
+     37
+    ]
+   },
+   "sampleTexts": [
+    "I keep getting ghoste..Widget Builder | "
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:div,div,div,div",
+   "instances": 20,
+   "capturedMembers": 1,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "80px 20px 216px",
+    "fontSize": "16px",
+    "fontWeight": "300",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "gap": "24px normal",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "label": 1,
+    "body": 1,
+    "kids": 5
+   },
+   "representative": {
+    "sel": "body > div > article > div:nth-of-type(4) > div:nth-of-type(1) > div",
+    "page": "/",
+    "text": "What type of project do you need?Will fr",
+    "score": 0,
+    "bbox": [
+     879,
+     1346,
+     331,
+     612
+    ]
+   },
+   "sampleTexts": [
+    "What type of project do you need?Will fr"
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:h4",
+   "instances": 19,
+   "capturedMembers": 8,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "label": 1,
+    "heading": 1,
+    "kids": 1
+   },
+   "representative": {
+    "sel": "body > div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(4)",
+    "page": "/",
+    "text": "Action",
+    "score": 1,
+    "bbox": [
+     1103,
+     3651,
+     115,
+     24
+    ]
+   },
+   "sampleTexts": [
+    "Action",
+    "sarah@designstudio.co",
+    "$8,200",
+    "mike.johnson@techcorp.com",
+    "$15,750"
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:img",
+   "instances": 18,
+   "capturedMembers": 10,
+   "pages": [
+    "/",
+    "/directory"
+   ],
+   "channels": [
+    "B"
+   ],
+   "hints": [
+    "text"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "oklab(0 0 0 / 0.05)",
+    "borderWidth": "1px",
+    "borderStyle": "solid",
+    "borderRadius": "10px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "block",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "icon": 1,
+    "kids": 1
+   },
+   "representative": {
+    "sel": "body > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div > div:nth-of-type(1)",
+    "page": "/",
+    "score": 0.5,
+    "bbox": [
+     65,
+     1234,
+     36,
+     36
+    ]
+   },
+   "sampleTexts": []
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:div,div,div",
+   "instances": 16,
+   "capturedMembers": 16,
+   "pages": [
+    "/",
+    "/pricing",
+    "/directory"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "gap": "8px",
+    "letterSpacing": "-0.32px",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "label": 1,
+    "kids": 3
+   },
+   "representative": {
+    "sel": "#first-input > div > div > div:nth-of-type(1) > div",
+    "page": "/",
+    "text": "Design onlyDesign + Build",
+    "score": 1,
+    "bbox": [
+     879,
+     1551,
+     331,
+     32
+    ]
+   },
+   "sampleTexts": [
+    "Design onlyDesign + Build",
+    "Widget Logoos-logo.svgEntry messageLooki",
+    "ASAP (within 2 weeks)Standard (4-6 weeks",
+    "Client mail213 messages, 2 un...",
+    "13Leads (last 7 days)57%Completion rate "
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:button",
+   "instances": 15,
+   "capturedMembers": 15,
+   "pages": [
+    "/",
+    "/directory"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "block",
+    "transitionProperty": "transform"
+   },
+   "slots": {
+    "label": 1,
+    "kids": 1
+   },
+   "representative": {
+    "sel": "#first-input > div > div > div:nth-of-type(2)",
+    "page": "/",
+    "text": "Send",
+    "score": 1,
+    "bbox": [
+     879,
+     1588,
+     331,
+     40
+    ]
+   },
+   "sampleTexts": [
+    "Send",
+    "Go back",
+    "New",
+    "To Follow Up",
+    "Contacted"
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:button",
+   "instances": 14,
+   "capturedMembers": 1,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgb(254, 254, 254)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "20px 20px 0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "block",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "label": 1,
+    "kids": 1
+   },
+   "representative": {
+    "sel": "#fourth-input > div",
+    "page": "/",
+    "text": "Submit",
+    "score": 2,
+    "bbox": [
+     879,
+     1574,
+     331,
+     58
+    ]
+   },
+   "sampleTexts": [
+    "Submit"
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "h6:div",
+   "instances": 14,
+   "capturedMembers": 8,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "hints": [
+    "text"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(10, 10, 10)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "icon": 1,
+    "kids": 1
+   },
+   "representative": {
+    "sel": "body > div > section:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-type(2) > h6:nth-of-type(2)",
+    "page": "/",
+    "score": -0.5,
+    "bbox": [
+     640,
+     5804,
+     209,
+     24
+    ]
+   },
+   "sampleTexts": []
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:svg,span",
+   "instances": 9,
+   "capturedMembers": 6,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "hints": [
+    "text"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "oklab(0.958141 0.0000436902 0.0000191331 / 0.5)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "6px",
+    "padding": "8px 12px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Geist",
+    "display": "flex",
+    "gap": "12px",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "icon": 1,
+    "label": 1,
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1)",
+    "page": "/",
+    "text": "Dashboard",
+    "score": 1.5,
+    "bbox": [
+     53,
+     928,
+     124,
+     36
+    ]
+   },
+   "sampleTexts": [
+    "Dashboard",
+    "Pricing rules",
+    "Email Settings",
+    "Integrations",
+    "I keep getting ghoste.."
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:svg,span",
+   "instances": 9,
+   "capturedMembers": 2,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "hints": [
+    "text"
+   ],
+   "style": {
+    "backgroundColor": "oklab(0.958141 0.0000436902 0.0000191331 / 0.1)",
+    "color": "rgb(241, 241, 241)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "6px",
+    "padding": "8px 12px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Geist",
+    "display": "flex",
+    "gap": "12px",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "icon": 1,
+    "label": 1,
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2)",
+    "page": "/",
+    "text": "Widget Builder",
+    "score": 1.5,
+    "bbox": [
+     53,
+     968,
+     148,
+     36
+    ]
+   },
+   "sampleTexts": [
+    "Widget Builder",
+    "Got feedback?"
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:button,button",
+   "instances": 9,
+   "capturedMembers": 8,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "icon": 1,
+    "label": 1,
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(4)",
+    "page": "/",
+    "text": "Details",
+    "score": 1,
+    "bbox": [
+     1103,
+     3688,
+     115,
+     37
+    ]
+   },
+   "sampleTexts": [
+    "Details"
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:svg,p",
+   "instances": 9,
+   "capturedMembers": 8,
+   "pages": [
+    "/pricing"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Geist",
+    "display": "flex",
+    "gap": "normal 8px",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "icon": 1,
+    "label": 1,
+    "body": 1,
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > div > div:nth-of-type(3) > article:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1)",
+    "page": "/pricing",
+    "text": "Full access for 14 days",
+    "score": 0,
+    "bbox": [
+     331,
+     529,
+     280,
+     20
+    ]
+   },
+   "sampleTexts": [
+    "Full access for 14 days",
+    "No credit card required",
+    "Unlimited estimates & leads",
+    "Remove \"Powered by\" branding",
+    "Slack notifications"
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:div,div,div",
+   "instances": 7,
+   "capturedMembers": 1,
+   "pages": [
+    "/directory"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(0, 0, 0)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "gap": "64px",
+    "letterSpacing": "-0.32px",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "label": 1,
+    "kids": 3
+   },
+   "representative": {
+    "sel": "body > div > footer > div:nth-of-type(1) > div:nth-of-type(2) > div",
+    "page": "/directory",
+    "text": "NavigationHomeSign inPricingDirectory Na",
+    "score": -0.5,
+    "bbox": [
+     32,
+     7746,
+     1216,
+     126
+    ]
+   },
+   "sampleTexts": [
+    "NavigationHomeSign inPricingDirectory Na"
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:h6,h6,h6",
+   "instances": 7,
+   "capturedMembers": 7,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "hints": [
+    "text"
+   ],
+   "style": {
+    "backgroundColor": "oklab(0.144787 0.00000661612 0.00000289828 / 0.03)",
+    "color": "rgb(10, 10, 10)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "12px",
+    "padding": "16px 32px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "grid",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "icon": 1,
+    "label": 1,
+    "kids": 3
+   },
+   "representative": {
+    "sel": "body > main > div > section:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-type(2)",
+    "page": "/",
+    "text": "Automated estimates sent instantly",
+    "score": 1,
+    "bbox": [
+     190,
+     5788,
+     900,
+     56
+    ]
+   },
+   "sampleTexts": [
+    "Automated estimates sent instantly",
+    "No back-and-forth pricing emails",
+    "Only hear from qualified leads",
+    "All leads in one dashboard",
+    "Focus on client work, not admin"
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "svg:path",
+   "instances": 7,
+   "capturedMembers": 7,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "hints": [
+    "text",
+    "accent"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(41, 163, 131)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "block",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "kids": 1
+   },
+   "representative": {
+    "sel": "body > div:nth-of-type(1) > div:nth-of-type(2) > h6:nth-of-type(2) > div > svg",
+    "page": "/",
+    "score": -0.5,
+    "bbox": [
+     732,
+     5804,
+     24,
+     24
+    ]
+   },
+   "sampleTexts": []
+  },
+  {
+   "kind": "unknown",
+   "hash": "svg:path,path",
+   "instances": 7,
+   "capturedMembers": 7,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "hints": [
+    "text"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "oklab(0.144787 0.00000661612 0.00000289828 / 0.25)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "block",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > div:nth-of-type(1) > div:nth-of-type(2) > h6:nth-of-type(3) > div > svg",
+    "page": "/",
+    "score": -0.5,
+    "bbox": [
+     941,
+     5804,
+     24,
+     24
+    ]
+   },
+   "sampleTexts": []
+  },
+  {
+   "kind": "unknown",
+   "hash": "button:span",
+   "instances": 6,
+   "capturedMembers": 1,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "gap": "normal 4px",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "label": 1,
+    "kids": 1
+   },
+   "representative": {
+    "sel": "body > div:nth-of-type(2) > div:nth-of-type(2) > div > div:nth-of-type(2) > button",
+    "page": "/",
+    "text": "Go back",
+    "score": 3,
+    "bbox": [
+     1143,
+     1641,
+     47,
+     16
+    ]
+   },
+   "sampleTexts": [
+    "Go back"
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "span:span",
+   "instances": 6,
+   "capturedMembers": 3,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "oklab(0.144787 0.00000661612 0.00000289828 / 0.9)",
+    "color": "rgb(10, 10, 10)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "9999px",
+    "padding": "0px",
+    "fontSize": "18px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "label": 1,
+    "kids": 1
+   },
+   "representative": {
+    "sel": "body > section:nth-of-type(3) > div > article:nth-of-type(1) > h3 > span:nth-of-type(1)",
+    "page": "/",
+    "text": "01",
+    "score": 1,
+    "bbox": [
+     24,
+     5201,
+     28,
+     28
+    ]
+   },
+   "sampleTexts": [
+    "01",
+    "02",
+    "03"
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "span:span",
+   "instances": 6,
+   "capturedMembers": 3,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "hints": [
+    "text"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "oklab(0.144787 0.00000661612 0.00000289828 / 0.5)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "inline",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "label": 1,
+    "kids": 1
+   },
+   "representative": {
+    "sel": "body > div:nth-of-type(1) > div:nth-of-type(1) > div > p > span",
+    "page": "/",
+    "text": "Digital Designer & Developer",
+    "score": 0.5,
+    "bbox": [
+     136,
+     4474,
+     189,
+     18
+    ]
+   },
+   "sampleTexts": [
+    "Digital Designer & Developer",
+    "Founder at OMMO®",
+    "Dsquared Media"
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:h3,div",
+   "instances": 6,
+   "capturedMembers": 5,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "oklab(0.144787 0.00000661612 0.00000289828 / 0.1)",
+    "borderWidth": "0px 0px 1px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "block",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "icon": 1,
+    "label": 1,
+    "heading": 1,
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > div > section:nth-of-type(5) > div > div > div:nth-of-type(2)",
+    "page": "/",
+    "text": "Can I create my own questions and pricin",
+    "score": -0.5,
+    "bbox": [
+     190,
+     6793,
+     900,
+     65
+    ]
+   },
+   "sampleTexts": [
+    "Can I create my own questions and pricin",
+    "How long does setup really take?",
+    "What happens after the 14-day trial?",
+    "Does it work on my website?",
+    "What if I need help?"
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:p,span",
+   "instances": 5,
+   "capturedMembers": 5,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "300",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "gap": "8px normal",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "label": 1,
+    "body": 1,
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > div:nth-of-type(4) > div:nth-of-type(1) > div > div:nth-of-type(1) > div",
+    "page": "/",
+    "text": "What type of project do you need?Will fr",
+    "score": 0,
+    "bbox": [
+     899,
+     1436,
+     233,
+     56
+    ]
+   },
+   "sampleTexts": [
+    "What type of project do you need?Will fr",
+    "Design onlyYou",
+    "How many pages do you need?Will from Ove",
+    "6You",
+    "Hit submit and I'll send your estimate!W"
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "svg:path,path,path,path",
+   "instances": 4,
+   "capturedMembers": 3,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "block",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "kids": 17
+   },
+   "representative": {
+    "sel": "body > div:nth-of-type(1) > div > article > div:nth-of-type(1) > svg",
+    "page": "/",
+    "score": 0,
+    "bbox": [
+     909,
+     820,
+     180,
+     27
+    ]
+   },
+   "sampleTexts": []
+  },
+  {
+   "kind": "unknown",
+   "hash": "svg:path,path,path,path",
+   "instances": 4,
+   "capturedMembers": 1,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(48, 48, 48)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "block",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "kids": 17
+   },
+   "representative": {
+    "sel": "body > div > article > div:nth-of-type(5) > div > svg",
+    "page": "/",
+    "score": 0,
+    "bbox": [
+     955,
+     1442,
+     180,
+     27
+    ]
+   },
+   "sampleTexts": []
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:h4,p",
+   "instances": 4,
+   "capturedMembers": 3,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "oklab(0.958141 0.0000436902 0.0000191331 / 0.03)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "oklab(0.958141 0.0000436902 0.0000191331 / 0.1)",
+    "borderWidth": "1px",
+    "borderStyle": "solid",
+    "borderRadius": "12px",
+    "padding": "16px 0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "label": 1,
+    "heading": 1,
+    "body": 1,
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > div:nth-of-type(2) > article > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1)",
+    "page": "/",
+    "text": "13Leads (last 7 days)",
+    "score": 0.5,
+    "bbox": [
+     661,
+     3490,
+     186,
+     124
+    ]
+   },
+   "sampleTexts": [
+    "13Leads (last 7 days)",
+    "57%Completion rate (last 7 days)",
+    "17%Interaction rate (last 7 days)"
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:h4,p",
+   "instances": 4,
+   "capturedMembers": 1,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "hints": [
+    "text"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(10, 10, 10)",
+    "borderColor": "oklab(0.144787 0.00000661612 0.00000289828 / 0.1)",
+    "borderWidth": "0px 1px 0px 0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px 20px 0px 0px",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "label": 1,
+    "heading": 1,
+    "body": 1,
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > div > div:nth-of-type(1) > article > div:nth-of-type(2) > div:nth-of-type(2)",
+    "page": "/",
+    "text": "Client mail213 messages, 2 un...",
+    "score": 0,
+    "bbox": [
+     121,
+     3442,
+     158,
+     31
+    ]
+   },
+   "sampleTexts": [
+    "Client mail213 messages, 2 un..."
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:p,div",
+   "instances": 4,
+   "capturedMembers": 4,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "gap": "24px normal",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "label": 1,
+    "body": 1,
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > main > div > div:nth-of-type(1) > div:nth-of-type(1)",
+    "page": "/",
+    "text": "\"It's saved me jumping on calls and writ",
+    "score": 0,
+    "bbox": [
+     24,
+     4225,
+     357,
+     273
+    ]
+   },
+   "sampleTexts": [
+    "\"It's saved me jumping on calls and writ",
+    "\"I only spend time on conversations with",
+    "\"We've gotten two leads so far, and one ",
+    "\"What a great tool and super helpful, I "
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:img,p",
+   "instances": 4,
+   "capturedMembers": 4,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "gap": "normal 8px",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "label": 1,
+    "body": 1,
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > main > div > div:nth-of-type(1) > div:nth-of-type(1) > div",
+    "page": "/",
+    "text": "Jordan GilroyDigital Designer & Develope",
+    "score": -0.5,
+    "bbox": [
+     80,
+     4450,
+     245,
+     48
+    ]
+   },
+   "sampleTexts": [
+    "Jordan GilroyDigital Designer & Develope",
+    "Kyle CravenFounder at OMMO®",
+    "Danny DonovanDsquared Media",
+    "Amanda PeytonFounder at Pool"
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "p:br,span",
+   "instances": 4,
+   "capturedMembers": 4,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "hints": [
+    "text"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(10, 10, 10)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "block",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "label": 1,
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > div > div:nth-of-type(1) > div:nth-of-type(2) > div > p",
+    "page": "/",
+    "text": "Kyle CravenFounder at OMMO®",
+    "score": 0.5,
+    "bbox": [
+     602,
+     4456,
+     131,
+     36
+    ]
+   },
+   "sampleTexts": [
+    "Kyle CravenFounder at OMMO®",
+    "Danny DonovanDsquared Media",
+    "Amanda PeytonFounder at Pool",
+    "Jordan GilroyDigital Designer & Develope"
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:svg,div",
+   "instances": 4,
+   "capturedMembers": 4,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgb(241, 241, 241)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "oklab(0.144787 0.00000661612 0.00000289828 / 0.05)",
+    "borderWidth": "1px",
+    "borderStyle": "solid",
+    "borderRadius": "6px",
+    "padding": "12px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "gap": "normal 12px",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "icon": 1,
+    "label": 1,
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > div > article:nth-of-type(2) > div > div > div:nth-of-type(1)",
+    "page": "/",
+    "text": "Base priceStart the estimate from $3,000",
+    "score": 2,
+    "bbox": [
+     457,
+     4918,
+     366,
+     60
+    ]
+   },
+   "sampleTexts": [
+    "Base priceStart the estimate from $3,000",
+    "Page pricingAdd $500 per page",
+    "Price rangeConvert estimate to price ran",
+    "Needs it done urgently?Add 50% to the es"
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "svg:circle,circle,circle,circle",
+   "instances": 4,
+   "capturedMembers": 4,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "block",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "kids": 6
+   },
+   "representative": {
+    "sel": "body > article:nth-of-type(2) > div > div > div:nth-of-type(1) > svg",
+    "page": "/",
+    "score": -0.5,
+    "bbox": [
+     470,
+     4936,
+     24,
+     24
+    ]
+   },
+   "sampleTexts": []
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:h5,h6",
+   "instances": 4,
+   "capturedMembers": 4,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "hints": [
+    "text"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(10, 10, 10)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "block",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "label": 1,
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > div > div > div:nth-of-type(1) > div > div:nth-of-type(1)",
+    "page": "/",
+    "text": "Base priceStart the estimate from $3,000",
+    "score": 0.5,
+    "bbox": [
+     506,
+     4931,
+     204,
+     34
+    ]
+   },
+   "sampleTexts": [
+    "Base priceStart the estimate from $3,000",
+    "Page pricingAdd $500 per page",
+    "Price rangeConvert estimate to price ran",
+    "Needs it done urgently?Add 50% to the es"
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:img",
+   "instances": 3,
+   "capturedMembers": 1,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgb(255, 255, 255)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "oklab(0.144787 0.00000661612 0.00000289828 / 0.1)",
+    "borderWidth": "1px",
+    "borderStyle": "solid",
+    "borderRadius": "8px",
+    "padding": "6px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "block",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "icon": 1,
+    "kids": 1
+   },
+   "representative": {
+    "sel": "body > div:nth-of-type(2) > article > div:nth-of-type(1) > div > div:nth-of-type(1)",
+    "page": "/",
+    "score": 1.5,
+    "bbox": [
+     953,
+     3477,
+     36,
+     36
+    ]
+   },
+   "sampleTexts": []
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:h4,svg",
+   "instances": 3,
+   "capturedMembers": 3,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "icon": 1,
+    "label": 1,
+    "heading": 1,
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1)",
+    "page": "/",
+    "text": "Email",
+    "score": 1,
+    "bbox": [
+     686,
+     3651,
+     161,
+     24
+    ]
+   },
+   "sampleTexts": [
+    "Email",
+    "Status",
+    "Price"
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "h3:span,span",
+   "instances": 3,
+   "capturedMembers": 3,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "hints": [
+    "text"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(10, 10, 10)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "18px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "gap": "normal 12px",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "label": 1,
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > div > section:nth-of-type(3) > div > article:nth-of-type(1) > h3",
+    "page": "/",
+    "text": "01Design to match your brand",
+    "score": 0.5,
+    "bbox": [
+     24,
+     5201,
+     400,
+     28
+    ]
+   },
+   "sampleTexts": [
+    "01Design to match your brand",
+    "02Set your pricing rules",
+    "03Write your email and go live!"
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:img,img",
+   "instances": 3,
+   "capturedMembers": 3,
+   "pages": [
+    "/directory"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "oklab(0 0 0 / 0.05)",
+    "borderWidth": "1px",
+    "borderStyle": "solid",
+    "borderRadius": "10px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "block",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "media": 1,
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > div > div:nth-of-type(5) > a > div > div:nth-of-type(1)",
+    "page": "/directory",
+    "score": 0.5,
+    "bbox": [
+     88,
+     1957,
+     488,
+     366
+    ]
+   },
+   "sampleTexts": []
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:a,button",
+   "instances": 2,
+   "capturedMembers": 2,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "gap": "normal 8px",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "label": 1,
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > main > div > section:nth-of-type(1) > div:nth-of-type(2)",
+    "page": "/",
+    "text": "Add to your site See a demo",
+    "score": 1,
+    "bbox": [
+     466,
+     454,
+     348,
+     50
+    ]
+   },
+   "sampleTexts": [
+    "Add to your site See a demo",
+    "Get started for free See a demo"
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "span:div,div,div,div",
+   "instances": 2,
+   "capturedMembers": 2,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "hints": [
+    "text"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(10, 10, 10)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "block",
+    "letterSpacing": "-0.32px",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "label": 1,
+    "kids": 19
+   },
+   "representative": {
+    "sel": "body > div > div:nth-of-type(2) > div:nth-of-type(1) > span > span:nth-of-type(2)",
+    "page": "/",
+    "text": "over-stimulated.com",
+    "score": 1,
+    "bbox": [
+     141,
+     737,
+     181,
+     21
+    ]
+   },
+   "sampleTexts": [
+    "over-stimulated.com",
+    "Email copied"
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:span,span",
+   "instances": 2,
+   "capturedMembers": 2,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "hints": [
+    "text"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "fontFamily": "Geist",
+    "display": "flex",
+    "gap": "4px normal",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "label": 1,
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div > div:nth-of-type(2)",
+    "page": "/",
+    "text": "Over-StimulatedBallpark Pro",
+    "score": 1,
+    "bbox": [
+     126,
+     818,
+     106,
+     36
+    ]
+   },
+   "sampleTexts": [
+    "Over-StimulatedBallpark Pro",
+    "Will Thomsonwill@over-stimulated.com"
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:article",
+   "instances": 2,
+   "capturedMembers": 2,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "gap": "12.6px normal",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "media": 1,
+    "label": 1,
+    "heading": 1,
+    "kids": 1
+   },
+   "representative": {
+    "sel": "body > div:nth-of-type(1) > div > div:nth-of-type(3) > div:nth-of-type(1) > div",
+    "page": "/",
+    "text": "Looking for an estimated price for your ",
+    "score": 0,
+    "bbox": [
+     894,
+     787,
+     333,
+     312
+    ]
+   },
+   "sampleTexts": [
+    "Looking for an estimated price for your "
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:h2,button,a",
+   "instances": 2,
+   "capturedMembers": 2,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px 0px 18px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "icon": 1,
+    "label": 1,
+    "heading": 1,
+    "kids": 3
+   },
+   "representative": {
+    "sel": "body > div:nth-of-type(3) > div:nth-of-type(1) > div > article > div:nth-of-type(3)",
+    "page": "/",
+    "text": "Looking for an estimated price for your ",
+    "score": 0,
+    "bbox": [
+     917,
+     788,
+     288,
+     310
+    ]
+   },
+   "sampleTexts": [
+    "Looking for an estimated price for your "
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "label:span,div",
+   "instances": 2,
+   "capturedMembers": 2,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "gap": "4px normal",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "label": 1,
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > div:nth-of-type(2) > div > div:nth-of-type(2) > div:nth-of-type(3) > label:nth-of-type(1)",
+    "page": "/",
+    "text": "Primary Color",
+    "score": 1,
+    "bbox": [
+     915,
+     1404,
+     291,
+     60
+    ]
+   },
+   "sampleTexts": [
+    "Primary Color",
+    "Secondary Color"
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:div,input",
+   "instances": 2,
+   "capturedMembers": 2,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "gap": "normal 4px",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > div > div:nth-of-type(2) > div:nth-of-type(3) > label:nth-of-type(1) > div",
+    "page": "/",
+    "score": 0,
+    "bbox": [
+     915,
+     1424,
+     291,
+     40
+    ]
+   },
+   "sampleTexts": []
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:input",
+   "instances": 2,
+   "capturedMembers": 2,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "kids": 1
+   },
+   "representative": {
+    "sel": "body > div:nth-of-type(2) > div:nth-of-type(3) > label:nth-of-type(1) > div > div",
+    "page": "/",
+    "score": 0,
+    "bbox": [
+     915,
+     1424,
+     40,
+     40
+    ]
+   },
+   "sampleTexts": []
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:span",
+   "instances": 2,
+   "capturedMembers": 1,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgb(222, 222, 222)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "9999px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "flex",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "label": 1,
+    "kids": 1
+   },
+   "representative": {
+    "sel": "body > div > div:nth-of-type(1) > article > div:nth-of-type(3) > div:nth-of-type(1)",
+    "page": "/",
+    "text": "WT",
+    "score": 2.5,
+    "bbox": [
+     49,
+     3506,
+     40,
+     40
+    ]
+   },
+   "sampleTexts": [
+    "WT"
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:span",
+   "instances": 2,
+   "capturedMembers": 1,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "B"
+   ],
+   "hints": [
+    "text"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(48, 48, 48)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "18px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "grid",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "label": 1,
+    "kids": 1
+   },
+   "representative": {
+    "sel": "#second-input > div > div > div:nth-of-type(1) > div > div",
+    "page": "/",
+    "text": "6",
+    "score": 1,
+    "bbox": [
+     915,
+     1544,
+     259,
+     43
+    ]
+   },
+   "sampleTexts": [
+    "6"
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "article:div,div,div",
+   "instances": 2,
+   "capturedMembers": 2,
+   "pages": [
+    "/pricing"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "oklab(0.958141 0.0000436902 0.0000191331 / 0.02)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "lab(95.1451 0 0 / 0.05)",
+    "borderWidth": "1px",
+    "borderStyle": "solid",
+    "borderRadius": "6px",
+    "padding": "48px 24px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Geist",
+    "display": "flex",
+    "gap": "24px normal",
+    "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke,",
+    "transitionDuration": "0.15s"
+   },
+   "slots": {
+    "icon": 1,
+    "label": 1,
+    "heading": 1,
+    "body": 1,
+    "kids": 3
+   },
+   "representative": {
+    "sel": "body > main > div > div > div:nth-of-type(3) > article:nth-of-type(1)",
+    "page": "/pricing",
+    "text": "Free TrialFull access for 14 daysNo cred",
+    "score": 0.5,
+    "bbox": [
+     306,
+     407,
+     330,
+     510
+    ]
+   },
+   "sampleTexts": [
+    "Free TrialFull access for 14 daysNo cred",
+    "Ballpark ProUnlimited estimates & leadsR"
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:h2",
+   "instances": 2,
+   "capturedMembers": 2,
+   "pages": [
+    "/pricing"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "lab(95.1451 0 0 / 0.05)",
+    "borderWidth": "0px 0px 1px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px 0px 24px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Geist",
+    "display": "flex",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "label": 1,
+    "heading": 1,
+    "kids": 1
+   },
+   "representative": {
+    "sel": "body > div > div > div:nth-of-type(3) > article:nth-of-type(1) > div:nth-of-type(1)",
+    "page": "/pricing",
+    "text": "Free Trial",
+    "score": 0,
+    "bbox": [
+     331,
+     456,
+     280,
+     49
+    ]
+   },
+   "sampleTexts": [
+    "Free Trial",
+    "Ballpark Pro"
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "div:div,a",
+   "instances": 2,
+   "capturedMembers": 2,
+   "pages": [
+    "/pricing"
+   ],
+   "channels": [
+    "B"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(250, 250, 250)",
+    "borderColor": "lab(95.1451 0 0 / 0.05) rgb(38, 38, 38) rgb(38, 38, 38)",
+    "borderWidth": "1px 0px 0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "24px 0px 0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Geist",
+    "display": "block",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "label": 1,
+    "body": 1,
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > div > div > div:nth-of-type(3) > article:nth-of-type(1) > div:nth-of-type(3)",
+    "page": "/pricing",
+    "text": "Free for 14 daysGet started with Free Tr",
+    "score": 0,
+    "bbox": [
+     331,
+     753,
+     280,
+     115
+    ]
+   },
+   "sampleTexts": [
+    "Free for 14 daysGet started with Free Tr",
+    "$15/monthEarly Supporter PriceGet starte"
+   ]
+  },
+  {
+   "kind": "unknown",
+   "hash": "p:span,span",
+   "instances": 2,
+   "capturedMembers": 2,
+   "pages": [
+    "/pricing"
+   ],
+   "channels": [
+    "B"
+   ],
+   "hints": [
+    "text"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(241, 241, 241)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "20px",
+    "fontWeight": "400",
+    "fontFamily": "Geist",
+    "display": "block",
+    "letterSpacing": "-0.8px",
+    "transitionProperty": "all"
+   },
+   "slots": {
+    "label": 1,
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > div:nth-of-type(3) > article:nth-of-type(1) > div:nth-of-type(3) > div > p",
+    "page": "/pricing",
+    "text": "Free for 14 days",
+    "score": 1,
+    "bbox": [
+     331,
+     778,
+     139,
+     21
+    ]
+   },
+   "sampleTexts": [
+    "Free for 14 days",
+    "$15/month"
+   ]
+  }
+ ],
+ "skipped": [
+  {
+   "kind": "button",
+   "hash": "button:",
+   "instances": 1,
+   "capturedMembers": 1,
+   "pages": [
+    "/"
+   ],
+   "channels": [
+    "A"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(48, 48, 48)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "block",
+    "transitionProperty": "all",
+    "transitionDuration": "0.2s"
+   },
+   "slots": {
+    "label": 1,
+    "kids": 0
+   },
+   "representative": {
+    "sel": "body > div > article > div:nth-of-type(5) > div > button",
+    "page": "/",
+    "text": "Start again",
+    "score": 3,
+    "bbox": [
+     1004,
+     1557,
+     81,
+     24
+    ]
+   },
+   "sampleTexts": [
+    "Start again"
+   ],
+   "skipReason": "singleton without semantic role"
+  },
+  {
+   "kind": "button",
+   "hash": "button:svg,span",
+   "instances": 1,
+   "capturedMembers": 1,
+   "pages": [
+    "/sign-in"
+   ],
+   "channels": [
+    "A"
+   ],
+   "hints": [
+    "text",
+    "sm"
+   ],
+   "style": {
+    "backgroundColor": "rgb(17, 17, 17)",
+    "color": "rgb(241, 241, 241)",
+    "borderColor": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+    "borderWidth": "1px",
+    "borderStyle": "solid",
+    "borderRadius": "10px",
+    "padding": "12px 16px",
+    "fontSize": "14px",
+    "fontWeight": "600",
+    "fontFamily": "Geist",
+    "display": "inline-flex",
+    "gap": "8px",
+    "transitionProperty": "color, background-color, border-color, outline-color, text-decoration-color, fill, stroke,",
+    "transitionDuration": "0.15s"
+   },
+   "slots": {
+    "icon": 1,
+    "label": 1,
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > div > div > div > form:nth-of-type(2) > button",
+    "page": "/sign-in",
+    "text": "Sign in with Google",
+    "score": 4.5,
+    "bbox": [
+     459,
+     410,
+     362,
+     40
+    ]
+   },
+   "sampleTexts": [
+    "Sign in with Google"
+   ],
+   "skipReason": "singleton without semantic role"
+  },
+  {
+   "kind": "button",
+   "hash": "button:span,span",
+   "instances": 1,
+   "capturedMembers": 1,
+   "pages": [
+    "/pricing"
+   ],
+   "channels": [
+    "A"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(241, 241, 241)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Geist",
+    "display": "block",
+    "letterSpacing": "-0.32px",
+    "transitionProperty": "opacity",
+    "transitionDuration": "0.25s"
+   },
+   "slots": {
+    "label": 1,
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > div:nth-of-type(1) > div:nth-of-type(2) > div > div:nth-of-type(3) > button",
+    "page": "/pricing",
+    "text": "support@ballpark.ingEmail copied",
+    "score": 3,
+    "bbox": [
+     310,
+     1539,
+     153,
+     19
+    ]
+   },
+   "sampleTexts": [
+    "support@ballpark.ingEmail copied"
+   ],
+   "skipReason": "singleton without semantic role"
+  },
+  {
+   "kind": "button",
+   "hash": "button:span,span",
+   "instances": 1,
+   "capturedMembers": 1,
+   "pages": [
+    "/directory"
+   ],
+   "channels": [
+    "A"
+   ],
+   "style": {
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "color": "rgb(0, 0, 0)",
+    "borderColor": "rgb(38, 38, 38)",
+    "borderWidth": "0px",
+    "borderStyle": "solid",
+    "borderRadius": "0px",
+    "padding": "0px",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "fontFamily": "Antartica",
+    "display": "block",
+    "letterSpacing": "-0.32px",
+    "transitionProperty": "opacity",
+    "transitionDuration": "0.25s"
+   },
+   "slots": {
+    "label": 1,
+    "kids": 2
+   },
+   "representative": {
+    "sel": "body > div:nth-of-type(1) > div:nth-of-type(2) > div > div:nth-of-type(3) > button",
+    "page": "/directory",
+    "text": "support@ballpark.ingEmail copied",
+    "score": 2.5,
+    "bbox": [
+     316,
+     7773,
+     153,
+     19
+    ]
+   },
+   "sampleTexts": [
+    "support@ballpark.ingEmail copied"
+   ],
+   "skipReason": "singleton without semantic role"
+  }
+ ]
+}

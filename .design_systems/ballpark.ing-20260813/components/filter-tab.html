@@ -1,0 +1,55 @@
+<!-- filter-tab — extracted from https://www.ballpark.ing/ 2026-08-13 · original bbox 90,612,112,38 -->
+<!doctype html>
+<meta charset="utf-8">
+<title>filter-tab</title>
+<style>
+  :root {
+  }
+
+  body { margin: 0; padding: 32px; font-family: system-ui, sans-serif; background: var(--color-contentDark); }
+  .dsys-demo { margin-bottom: 40px; }
+  .dsys-demo h2 { font: 600 13px/1 monospace; color: #888; margin: 0 0 12px; }
+  .dsys-row { display: flex; gap: 24px; align-items: flex-start; flex-wrap: wrap; }
+  .dsys-item { max-width: 480px; }
+  .dsys-item--wide { max-width: 100%; flex-basis: 100%; }
+  .dsys-tag { display: block; font: 11px/1 monospace; color: #aaa; margin-bottom: 6px; }
+  .filter-tab {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    background-color: oklab(0.999994 0.0000455678 0.0000200868 / 0.3);
+    color: oklab(0 0 0 / 0.5);
+    font-family: Antartica, sans-serif;
+    font-size: 14px;
+    font-weight: 520;
+    line-height: 16.38px;
+    letter-spacing: -0.28px;
+    white-space: nowrap;
+    border: 1px solid oklab(0 0 0 / 0.05);
+    border-radius: 13px;
+    cursor: pointer;
+    transition: color cubic-bezier(0.4, 0, 0.2, 1), background-color cubic-bezier(0.4, 0, 0.2, 1), border-color cubic-bezier(0.4, 0, 0.2, 1), outline-color cubic-bezier(0.4, 0, 0.2, 1), text-decoration-color cubic-bezier(0.4, 0, 0.2, 1), fill cubic-bezier(0.4, 0, 0.2, 1), stroke cubic-bezier(0.4, 0, 0.2, 1), --tw-gradient-from cubic-bezier(0.4, 0, 0.2, 1), --tw-gradient-via cubic-bezier(0.4, 0, 0.2, 1), --tw-gradient-to cubic-bezier(0.4, 0, 0.2, 1);
+    appearance: button;
+    list-style-type: none;
+  }
+  .filter-tab .p1 {
+    display: block;
+    overflow: hidden;
+    width: 16px;
+    height: 16px;
+    list-style-type: none;
+  }
+  .filter-tab.is-hover {
+    background-color: oklab(0.999994 0.0000455677 0.0000200868 / 0.7);
+  }
+</style>
+<section class="dsys-demo">
+<h2>filter-tab</h2>
+<div class="dsys-row"><div class="dsys-item"><span class="dsys-tag">base</span>
+<button class="filter-tab" data-src-class="flex items-center gap-[8px] px-[12px] py-[10px] rounded-[13px] text-[14px] font-[520] leading-[1.17] tracking-[-0.02em] transition-colors border-[1px] duration-0 whitespace-nowrap bg-white/30 text-bla"><svg focusable="false" preserveAspectRatio="xMidYMid meet" fill="currentColor" width="16" height="16" viewBox="0 0 32 32" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="p1"><path d="M26,14H24v2h2a3.0033,3.0033,0,0,1,3,3v4h2V19A5.0058,5.0058,0,0,0,26,14Z"></path><path d="M24,4a3,3,0,1,1-3,3,3,3,0,0,1,3-3m0-2a5,5,0,1,0,5,5A5,5,0,0,0,24,2Z"></path><path d="M23,30H21V28a3.0033,3.0033,0,0,0-3-3H14a3.0033,3.0033,0,0,0-3,3v2H9V28a5.0059,5.0059,0,0,1,5-5h4a5.0059,5.0059,0,0,1,5,5Z"></path><path d="M16,13a3,3,0,1,1-3,3,3,3,0,0,1,3-3m0-2a5,5,0,1,0,5,5A5,5,0,0,0,16,11Z"></path><path d="M8,14H6a5.0059,5.0059,0,0,0-5,5v4H3V19a3.0033,3.0033,0,0,1,3-3H8Z"></path><path d="M8,4A3,3,0,1,1,5,7,3,3,0,0,1,8,4M8,2a5,5,0,1,0,5,5A5,5,0,0,0,8,2Z"></path></svg>Agencies</button>
+</div>
+<div class="dsys-item"><span class="dsys-tag">:hover (forced)</span>
+<button class="filter-tab is-hover" data-src-class="flex items-center gap-[8px] px-[12px] py-[10px] rounded-[13px] text-[14px] font-[520] leading-[1.17] tracking-[-0.02em] transition-colors border-[1px] duration-0 whitespace-nowrap bg-white/30 text-bla"><svg focusable="false" preserveAspectRatio="xMidYMid meet" fill="currentColor" width="16" height="16" viewBox="0 0 32 32" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="p1"><path d="M26,14H24v2h2a3.0033,3.0033,0,0,1,3,3v4h2V19A5.0058,5.0058,0,0,0,26,14Z"></path><path d="M24,4a3,3,0,1,1-3,3,3,3,0,0,1,3-3m0-2a5,5,0,1,0,5,5A5,5,0,0,0,24,2Z"></path><path d="M23,30H21V28a3.0033,3.0033,0,0,0-3-3H14a3.0033,3.0033,0,0,0-3,3v2H9V28a5.0059,5.0059,0,0,1,5-5h4a5.0059,5.0059,0,0,1,5,5Z"></path><path d="M16,13a3,3,0,1,1-3,3,3,3,0,0,1,3-3m0-2a5,5,0,1,0,5,5A5,5,0,0,0,16,11Z"></path><path d="M8,14H6a5.0059,5.0059,0,0,0-5,5v4H3V19a3.0033,3.0033,0,0,1,3-3H8Z"></path><path d="M8,4A3,3,0,1,1,5,7,3,3,0,0,1,8,4M8,2a5,5,0,1,0,5,5A5,5,0,0,0,8,2Z"></path></svg>Agencies</button>
+</div></div>
+</section>

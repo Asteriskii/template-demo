@@ -1,0 +1,67 @@
+{
+  "pages": [
+    {
+      "page": "/sign-up",
+      "reason": "pixel-identical layout to /sign-in (Google OAuth card, copy swapped: 'Sign in'->'Sign up'); no new component surface. Represented by the auth-form atom's sign-in/sign-up variant note instead of a separate sweep."
+    }
+  ],
+  "atoms": [
+    {
+      "candidate": "icon-button",
+      "kind": "icon-button",
+      "instances": 10,
+      "reason": "Only resolvable selector lives inside a duplicated infinite-scroll carousel (widget-builder product mockup) with no stable DOM path; visually indistinguishable from button--row-action's ghost styling. Dropped rather than shipped with a brittle/duplicated selector."
+    },
+    {
+      "candidate": "avatar-initials",
+      "kind": "unknown",
+      "instances": 2,
+      "reason": "Borderline instance count (2, at the catalog gate floor) and no semantic/landmark role; decorative persona avatar ('WT' circle) inside the email-mockup screenshot, low reuse value for a consumer building new pages."
+    },
+    {
+      "candidate": "logo-mark",
+      "kind": "unknown",
+      "instances": "3+ (one per page)",
+      "reason": "Brand asset (the Ballpark disc icon), not a reusable UI component pattern — documented in DESIGN.md Overview/auth-form anatomy instead of catalogued as a standalone atom."
+    },
+    {
+      "candidate": "stat-tile",
+      "kind": "unknown",
+      "instances": 3,
+      "reason": "All 3 instances (13 / 57% / 17%) occur within a single dashboard-preview section occurrence, itself decorative product-screenshot content (sample CRM data, not real marketing chrome). Documented as part of dashboard-preview's Composition instead of a standalone atom."
+    }
+  ],
+  "sections": [
+    {
+      "pattern": "how-it-works",
+      "autoLabel": "feature-grid",
+      "confidence": 0.7,
+      "page": "/",
+      "reason": "Ranked below the 8-section cap. Three numbered steps composed entirely from existing heading + body text + decorative icon — no new atom-level component, reproducible from the nearest section skeleton per AGENTS.md point 6."
+    },
+    {
+      "pattern": "testimonial-row",
+      "autoLabel": "unknown",
+      "confidence": 0,
+      "manualConfidence": 0.6,
+      "page": "/",
+      "reason": "Ranked below the 8-section cap. 3-quote flex row; content-dependent (testimonial text/name/role all conditional) with no distinct reusable chrome beyond text blocks already covered by DESIGN.md typography rules."
+    },
+    {
+      "pattern": "cta-band",
+      "confidence": 0.6,
+      "page": "/",
+      "reason": "Ranked below the 8-section cap. Reuses button--primary and button--secondary with a heading — no new composition beyond hero's own CTA row; consumers can compose it directly from those atoms."
+    },
+    {
+      "pattern": "directory-hero",
+      "confidence": 0.5,
+      "page": "/directory",
+      "reason": "Generic sub-hero (heading + subheading + single CTA), same pattern as the main hero at smaller scale. Not catalogued separately to stay within the section cap; compose from hero's skeleton."
+    }
+  ],
+  "notes": [
+    "Section classifier (extract-sections.js) mislabeled two home-page sections by heading mismatch: 'pricing-table' (order 2, heading 'So they submitted. Now what?') was corrected to 'dashboard-preview'; 'logo-wall' (order 5, heading 'Why does this beat contact forms...') was corrected to 'comparison-table'. Both corrections verified against section screenshots before finalizing the catalog.",
+    "The classifier did not surface any candidate at all for the /pricing pricing-cards block or the /directory grid+filter block — root cause: both pages nest their content in `body > main > main > div` / `body > main > div > div > div` (a double wrapper, not a `<section>` the classifier's DOM walk expects). Both selectors were hand-located via direct DOM query and verified with a screenshot before distillation."
+  ]
+}

@@ -1,0 +1,46 @@
+<!-- button--secondary — extracted from https://www.ballpark.ing/ 2026-08-13 · transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) · original bbox 644,454,170,50 -->
+<!doctype html>
+<meta charset="utf-8">
+<title>button--secondary</title>
+<style>
+  :root {
+    --color-landingDark: #0a0a0a;
+  }
+
+  body { margin: 0; padding: 32px; font-family: system-ui, sans-serif; background: var(--color-contentDark); }
+  .dsys-demo { margin-bottom: 40px; }
+  .dsys-demo h2 { font: 600 13px/1 monospace; color: #888; margin: 0 0 12px; }
+  .dsys-row { display: flex; gap: 24px; align-items: flex-start; flex-wrap: wrap; }
+  .dsys-item { max-width: 480px; }
+  .dsys-item--wide { max-width: 100%; flex-basis: 100%; }
+  .dsys-tag { display: block; font: 11px/1 monospace; color: #aaa; margin-bottom: 6px; }
+  .button--secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 0px 24px;
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--color-landingDark);
+    font-family: Antartica, sans-serif;
+    font-size: 17px;
+    line-height: 17px;
+    border: 1px solid oklab(0.144787 0.00000661612 0.00000289828 / 0.2);
+    border-radius: 16px;
+    cursor: pointer;
+    transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    appearance: button;
+  }
+  .button--secondary.is-hover {
+    opacity: 0.983015;
+  }
+</style>
+<section class="dsys-demo">
+<h2>button--secondary</h2>
+<div class="dsys-row"><div class="dsys-item"><span class="dsys-tag">base</span>
+<button class="button--secondary" data-src-class="h-[44px] px-[20px] flex items-center justify-center gap-[14px] rounded-[13px] bg-transparent text-landingDark landing-text leading-[100%] transition-opacity duration-300 hover:opacity-80 border-[1px] ">See a demo</button>
+</div>
+<div class="dsys-item"><span class="dsys-tag">:hover (forced)</span>
+<button class="button--secondary is-hover" data-src-class="h-[44px] px-[20px] flex items-center justify-center gap-[14px] rounded-[13px] bg-transparent text-landingDark landing-text leading-[100%] transition-opacity duration-300 hover:opacity-80 border-[1px] ">See a demo</button>
+</div></div>
+</section>

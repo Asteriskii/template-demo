@@ -1,0 +1,200 @@
+<!-- dashboard-preview-section — extracted from https://www.ballpark.ing/ 2026-08-13 · original bbox 0,3005,1280,1220 -->
+<!doctype html>
+<meta charset="utf-8">
+<title>dashboard-preview-section</title>
+<style>
+  :root {
+    --color-landingDark: #0a0a0a;
+    --contentColor: #f1f1f1;
+  }
+
+  body { margin: 0; padding: 32px; font-family: system-ui, sans-serif; background: var(--color-contentDark); }
+  .dsys-demo { margin-bottom: 40px; }
+  .dsys-demo h2 { font: 600 13px/1 monospace; color: #888; margin: 0 0 12px; }
+  .dsys-row { display: flex; gap: 24px; align-items: flex-start; flex-wrap: wrap; }
+  .dsys-item { max-width: 480px; }
+  .dsys-item--wide { max-width: 100%; flex-basis: 100%; }
+  .dsys-tag { display: block; font: 11px/1 monospace; color: #aaa; margin-bottom: 6px; }
+  .dashboard-preview-section {
+    padding: 240px 24px 0px;
+    color: rgb(250, 250, 250);
+    font-family: Antartica, sans-serif;
+    line-height: 24px;
+  }
+  .dashboard-preview-section .p1 {
+    color: var(--color-landingDark);
+    font-size: 36px;
+    line-height: 41.4px;
+    letter-spacing: -1.44px;
+    text-align: center;
+  }
+  .dashboard-preview-section .p2 {
+    margin: 16px 356px 0px;
+    color: oklab(0.144787 0.00000661612 0.00000289828 / 0.5);
+    font-size: 18px;
+    line-height: 23.4px;
+    text-align: center;
+    max-width: 520px;
+  }
+  .dashboard-preview-section .p3 {
+    display: grid;
+    flex-direction: column;
+    gap: 32px 16px;
+    margin: 80px 0px 0px;
+    max-width: 1400px;
+    grid-template-columns: 608px 608px;
+  }
+  .dashboard-preview-section .p5 {
+    padding: 12px;
+    background-color: oklab(0.144787 0.00000661612 0.00000289828 / 0.02);
+    border: 1px solid oklab(0.144787 0.00000661612 0.00000289828 / 0.07);
+    border-radius: 24px;
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.2) 0px 12px 24px 0px;
+    overflow: hidden;
+    position: relative;
+  }
+  .dashboard-preview-section .p7 {
+    display: flex;
+    align-items: center;
+    gap: normal 12px;
+    padding: 16px 24px 16px 12px;
+    background-color: var(--contentColor);
+    border: 1px solid oklab(0.144787 0.00000661612 0.00000289828 / 0.05);
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 6px 12px 0px;
+    position: absolute;
+  }
+  .dashboard-preview-section .p8 {
+    width: 36px;
+    height: 36px;
+  }
+  .dashboard-preview-section .p9 {
+    display: block;
+    color: rgba(0, 0, 0, 0);
+    width: 36px;
+    height: 36px;
+    max-width: 100%;
+  }
+  .dashboard-preview-section .p11 {
+    color: var(--color-landingDark);
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .dashboard-preview-section .p12 {
+    color: var(--color-landingDark);
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .dashboard-preview-section .p13 {
+    display: flex;
+    align-items: center;
+    padding: 0px 0px 16px;
+  }
+  .dashboard-preview-section .p14 {
+    display: flex;
+    gap: normal 8px;
+    padding: 0px 20px 0px 12px;
+  }
+  .dashboard-preview-section .p15 {
+    background-color: rgb(254, 95, 87);
+    border-radius: 9999px;
+    width: 12px;
+    height: 12px;
+  }
+  .dashboard-preview-section .p16 {
+    background-color: rgb(254, 189, 46);
+    border-radius: 9999px;
+    width: 12px;
+    height: 12px;
+  }
+  .dashboard-preview-section .p17 {
+    background-color: rgb(40, 200, 64);
+    border-radius: 9999px;
+    width: 12px;
+    height: 12px;
+  }
+  .dashboard-preview-section .p18 {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px 0px 0px;
+    color: var(--color-landingDark);
+    font-size: 14px;
+    line-height: 15.4px;
+  }
+  .dashboard-preview-section .p20 {
+    color: oklab(0.144787 0.00000661612 0.00000289828 / 0.5);
+  }
+  .dashboard-preview-section .p21 {
+    display: flex;
+    gap: normal 20px;
+    padding: 0px 0px 0px 20px;
+    width: 80px;
+    height: 24px;
+  }
+  .dashboard-preview-section .p22 {
+    display: block;
+    overflow: hidden;
+    width: 20px;
+    height: 24px;
+  }
+  .dashboard-preview-section .p23 {
+    display: block;
+    overflow: hidden;
+    width: 20px;
+    height: 24px;
+  }
+  .dashboard-preview-section .p24 {
+    display: flex;
+    align-items: center;
+    gap: normal 12px;
+    padding: 16px 0px 0px;
+    margin: 0px 12px;
+  }
+  .dashboard-preview-section .p25 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(222, 222, 222);
+    border-radius: 9999px;
+    width: 40px;
+    height: 40px;
+  }
+  .dashboard-preview-section .p26 {
+    display: block;
+    color: var(--color-landingDark);
+    width: 25.6719px;
+    height: 24px;
+  }
+  .dashboard-preview-section .p27 {
+    color: var(--color-landingDark);
+    font-size: 14px;
+    line-height: 15.4px;
+  }
+  .dashboard-preview-section .p29 {
+    color: oklab(0.144787 0.00000661612 0.00000289828 / 0.5);
+  }
+  .dashboard-preview-section .p30 {
+    padding: 64px 24px 96px 96px;
+    margin: 16px 0px 0px;
+    background-color: var(--contentColor);
+    border-radius: 12px;
+  }
+  .dashboard-preview-section .p31 {
+    display: block;
+    overflow: hidden;
+  }
+  .dashboard-preview-section .p32 {
+    padding: 48px 0px 0px;
+    color: var(--color-landingDark);
+    max-width: 480px;
+  }
+  .dashboard-preview-section .p37 {
+    font-weight: 700;
+  }
+</style>
+<section class="dsys-demo">
+<h2>dashboard-preview-section</h2>
+<div class="dsys-row"><div class="dsys-item dsys-item--wide"><span class="dsys-tag">base</span>
+<section class="dashboard-preview-section" data-src-class="pt-[120px] px-[24px] lg:pt-[240px]"><h2 class="p1" data-src-class="leading-[115%] text-[32px] text-balance tracking-[-0.04em] text-center text-landingDark landing-text lg:text-[36px]">So they submitted. Now what?</h2><p class="p2" data-src-class=" leading-[130%] text-[18px] tracking-[-0.0em] text-center text-landingDark/50 landing-text max-w-[520px] mx-auto mt-[16px]">Your estimate lands in their inbox. Their info lands in your</p><div class="p3" data-src-class="max-w-[1400px] mx-auto mt-[64px] flex flex-col gap-y-[32px] lg:grid lg:grid-cols-2 gap-x-[16px] lg:mt-[80px]"><div class="p4"><article class="p5" data-src-class="border-[1px] border-landingDark/7 bg-landingDark/2 rounded-[24px] p-[12px]  shadow-[0_12px_24px_0_rgba(0,0,0,0.2)] relative overflow-hidden"><div class="p6" data-src-class="translate-x-[300px]"><div class="p7" data-src-class="absolute top-[0px] right-[0px] z-[100] scale-[0.8] origin-top-right rounded-[20px] w-fit bg-landingLight border-[1px] border-landingDark/5 flex items-center py-[16px] pl-[12px] pr-[24px]  gap-x-[12px]"><div class="p8" data-src-class=" "><img class="p9" alt="" width="36" height="36" src="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2736%27 height=%2736%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23d0cfc9%27/%3E%3C/svg%3E"></div><div class="p10"><p class="p11" data-src-class="text-2 text-landingDark font-regular">Will from Over-Stimulated</p><p class="p12" data-src-class="text-2 text-landingDark font-regular">Your project estimate is inside!</p></div></div></div><div class="p13" data-src-class="flex items-center  pb-[16px]"><div class="p14" data-src-class="flex gap-x-[8px] pl-[12px] pr-[20px]"><div class="p15" data-src-class="w-[12px] h-[12px] bg-[#FE5F57] rounded-full"></div><div class="p16" data-src-class="w-[12px] h-[12px] bg-[#FEBD2E] rounded-full"></div><div class="p17" data-src-class="w-[12px] h-[12px] bg-[#28C840] rounded-full"></div></div><div class="p18" data-src-class="text-[14px] landing-text text-landingDark flex flex-col leading-[110%] pr-[20px] border-r-[1px] border-landingDark/10"><h4 class="p19">Client mail</h4><p class="p20" data-src-class=" text-landingDark/50">213 messages, 2 un...</p></div><div class="p21" data-src-class="flex gap-x-[20px] pl-[20px]"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="p22"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="p23"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z"></path></svg></div></div><div class="p24" data-src-class="mx-[12px] pt-[16px] flex items-center gap-x-[12px] border-t-[1px] border-t-landingDark/5"><div class="p25" data-src-class="w-[40px] h-[40px] rounded-full bg-[#DEDEDE] flex items-center justify-center"><span class="p26" data-src-class="text-landingDark text-[16px]">WT</span></div><div class="p27" data-src-class="text-[14px] text-landingDark leading-[110%]"><h4 class="p28">Will from Over-Stimulated</h4><h5 class="p29" data-src-class="text-landingDark/50">Your project estimate is inside!</h5></div></div><div class="p30" data-src-class="px-[24px] pb-[48px] pt-[32px] w-full bg-landingLight lg:pt-[64px] lg:pb-[96px] rounded-[12px] mt-[16px] lg:pl-[96px]"><svg class="p31" width="200" height="40" viewBox="0 0 200 40"><rect width="100%" height="100%" fill="currentColor" opacity="0.25"/><!-- svg stub: 29666 bytes --></svg><p class="p32" data-src-class="pt-[32px] text-landingDark max-w-[480px] text-[14px] lg:pt-[48px] lg:text-[16px]">Hey there!<br class="p33"><br class="p34">Thanks for using my estimation tool. Based on similar projec<br class="p35"><br class="p36">Estimated price:<span class="p37" data-src-class="font-bold">$12,500 - $15,500 USD</span><br class="p38"><br class="p39">If you're ready to take the next step, reach out to me at<br class="p40">will@over-stimulated.com<!-- trimmed --></p><!-- trimmed --></div></article></div><!-- trimmed --></div></section>
+</div></div>
+</section>

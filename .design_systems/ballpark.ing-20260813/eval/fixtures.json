@@ -1,0 +1,449 @@
+{
+  "meta": {
+    "source": "https://www.ballpark.ing/",
+    "extracted": "2026-08-13",
+    "theme": "light",
+    "extractorVersion": "0.3.0-phaseC"
+  },
+  "tokens": {
+    "core": {
+      "--color-landingDark": "#0a0a0a",
+      "--contentColor": "#f1f1f1",
+      "--color-accent-color": "#29a383",
+      "--color-white": "#fff",
+      "--color-dark1": "#0f1012",
+      "--color-contentDark": "#111"
+    },
+    "recallMin": 0.9,
+    "foreignRateMax": 0.05,
+    "colorTolerance": "CIEDE2000 deltaE <= 3"
+  },
+  "components": [
+    {
+      "name": "button--primary",
+      "match": "any element the consuming page presents as a button primary",
+      "sourcePage": "/",
+      "sourceSel": "body > div > section:nth-of-type(1) > div:nth-of-type(2) > a > button",
+      "expectText": "Add to your site",
+      "structure": {
+        "tags": [
+          "button"
+        ],
+        "maxDepth": 2
+      },
+      "css": [
+        {
+          "prop": "display",
+          "expect": [
+            "flex",
+            "inline-flex"
+          ]
+        },
+        {
+          "prop": "border-radius",
+          "expect": "16px"
+        },
+        {
+          "prop": "background-color",
+          "expect": "rgb(10, 10, 10)",
+          "tolerance": "deltaE<=3"
+        },
+        {
+          "prop": "color",
+          "expect": "rgb(241, 241, 241)",
+          "tolerance": "deltaE<=3"
+        },
+        {
+          "prop": "font-size",
+          "expect": "16px"
+        }
+      ],
+      "hover": [
+        {
+          "prop": "opacity",
+          "changes": true
+        }
+      ]
+    },
+    {
+      "name": "button--secondary",
+      "match": "any element the consuming page presents as a button secondary",
+      "sourcePage": "/",
+      "sourceSel": "body > main > div > section:nth-of-type(1) > div:nth-of-type(2) > button",
+      "expectText": "See a demo",
+      "structure": {
+        "tags": [
+          "button"
+        ],
+        "maxDepth": 1
+      },
+      "css": [
+        {
+          "prop": "display",
+          "expect": [
+            "flex",
+            "inline-flex"
+          ]
+        },
+        {
+          "prop": "border-radius",
+          "expect": "16px"
+        },
+        {
+          "prop": "background-color",
+          "expect": "rgba(0, 0, 0, 0)",
+          "tolerance": "deltaE<=3"
+        },
+        {
+          "prop": "color",
+          "expect": "rgb(10, 10, 10)",
+          "tolerance": "deltaE<=3"
+        },
+        {
+          "prop": "font-size",
+          "expect": "17px"
+        }
+      ],
+      "hover": [
+        {
+          "prop": "opacity",
+          "changes": true
+        }
+      ]
+    },
+    {
+      "name": "button--row-action",
+      "match": "any element the consuming page presents as a button row action",
+      "sourcePage": "/",
+      "sourceSel": "body > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(4) > button:nth-of-type(1)",
+      "expectText": "Details",
+      "structure": {
+        "tags": [
+          "button"
+        ],
+        "maxDepth": 1
+      },
+      "css": [
+        {
+          "prop": "display",
+          "expect": [
+            "flex",
+            "inline-flex"
+          ]
+        },
+        {
+          "prop": "border-radius",
+          "expect": "6px"
+        },
+        {
+          "prop": "background-color",
+          "expect": "oklab(0.958141 0.0000436902 0.0000191331 / 0.05)",
+          "tolerance": "deltaE<=3"
+        },
+        {
+          "prop": "color",
+          "expect": "rgb(241, 241, 241)",
+          "tolerance": "deltaE<=3"
+        },
+        {
+          "prop": "font-size",
+          "expect": "14px"
+        }
+      ]
+    },
+    {
+      "name": "status-badge",
+      "match": "any element the consuming page presents as a status badge",
+      "sourcePage": "/",
+      "sourceSel": "body > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > button",
+      "expectText": "New",
+      "structure": {
+        "tags": [
+          "button"
+        ],
+        "maxDepth": 3
+      },
+      "css": [
+        {
+          "prop": "display",
+          "expect": [
+            "flex",
+            "inline-flex"
+          ]
+        },
+        {
+          "prop": "border-radius",
+          "expect": "9999px"
+        },
+        {
+          "prop": "background-color",
+          "expect": "rgba(0, 0, 0, 0)",
+          "tolerance": "deltaE<=3"
+        },
+        {
+          "prop": "color",
+          "expect": "rgb(250, 250, 250)",
+          "tolerance": "deltaE<=3"
+        },
+        {
+          "prop": "font-size",
+          "expect": "14px"
+        }
+      ],
+      "hover": [
+        {
+          "prop": "opacity",
+          "changes": true
+        }
+      ]
+    },
+    {
+      "name": "input-field",
+      "match": "any element the consuming page presents as a input field",
+      "sourcePage": "/",
+      "sourceSel": "#entryMessage",
+      "expectText": "Looking for an estimated",
+      "structure": {
+        "tags": [
+          "textarea"
+        ],
+        "maxDepth": 1
+      },
+      "css": [
+        {
+          "prop": "display",
+          "expect": [
+            "flex",
+            "inline-flex"
+          ]
+        },
+        {
+          "prop": "border-radius",
+          "expect": "6px"
+        },
+        {
+          "prop": "background-color",
+          "expect": "oklab(0.958141 0.0000436902 0.0000191331 / 0.03)",
+          "tolerance": "deltaE<=3"
+        },
+        {
+          "prop": "color",
+          "expect": "rgb(250, 250, 250)",
+          "tolerance": "deltaE<=3"
+        },
+        {
+          "prop": "font-size",
+          "expect": "14px"
+        }
+      ],
+      "focus": [
+        {
+          "prop": "outline-width",
+          "expect": "0px"
+        },
+        {
+          "prop": "outline-style",
+          "expect": "solid"
+        },
+        {
+          "prop": "outline-color",
+          "changes": true
+        }
+      ]
+    },
+    {
+      "name": "accordion-item",
+      "match": "any element the consuming page presents as a accordion item",
+      "sourcePage": "/",
+      "sourceSel": "body > div > section:nth-of-type(5) > div > div > div:nth-of-type(1)",
+      "expectText": "Will this actually save ",
+      "structure": {
+        "tags": [
+          "div"
+        ],
+        "maxDepth": 7
+      },
+      "css": [
+        {
+          "prop": "color",
+          "expect": "rgb(250, 250, 250)",
+          "tolerance": "deltaE<=3"
+        }
+      ]
+    },
+    {
+      "name": "feature-check-row",
+      "match": "any element the consuming page presents as a feature check row",
+      "sourcePage": "/pricing",
+      "sourceSel": "body > main > main > div > div > div:nth-of-type(3) > article:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1)",
+      "expectText": "Full access for 14 days",
+      "structure": {
+        "tags": [
+          "div"
+        ],
+        "maxDepth": 3
+      },
+      "css": [
+        {
+          "prop": "display",
+          "expect": [
+            "flex",
+            "inline-flex"
+          ]
+        },
+        {
+          "prop": "color",
+          "expect": "rgb(250, 250, 250)",
+          "tolerance": "deltaE<=3"
+        }
+      ]
+    },
+    {
+      "name": "filter-tab",
+      "match": "any element the consuming page presents as a filter tab",
+      "sourcePage": "/directory",
+      "sourceSel": "body > div > div:nth-of-type(3) > div > div:nth-of-type(2) > button",
+      "expectText": "Agencies",
+      "structure": {
+        "tags": [
+          "button"
+        ],
+        "maxDepth": 3
+      },
+      "css": [
+        {
+          "prop": "display",
+          "expect": [
+            "flex",
+            "inline-flex"
+          ]
+        },
+        {
+          "prop": "border-radius",
+          "expect": "13px"
+        },
+        {
+          "prop": "background-color",
+          "expect": "oklab(0.999994 0.0000455678 0.0000200868 / 0.3)",
+          "tolerance": "deltaE<=3"
+        },
+        {
+          "prop": "color",
+          "expect": "oklab(0 0 0 / 0.5)",
+          "tolerance": "deltaE<=3"
+        },
+        {
+          "prop": "font-size",
+          "expect": "14px"
+        },
+        {
+          "prop": "font-weight",
+          "expect": "520"
+        }
+      ],
+      "hover": [
+        {
+          "prop": "background-color",
+          "changes": true
+        }
+      ]
+    },
+    {
+      "name": "directory-card",
+      "match": "any element the consuming page presents as a directory card",
+      "sourcePage": "/directory",
+      "sourceSel": "body > main > div > div > div:nth-of-type(3) > div > div:nth-of-type(10)",
+      "expectText": "Dsquared MediaGraphic De",
+      "structure": {
+        "tags": [
+          "div"
+        ],
+        "maxDepth": 7
+      },
+      "css": [
+        {
+          "prop": "color",
+          "expect": "rgb(250, 250, 250)",
+          "tolerance": "deltaE<=3"
+        }
+      ]
+    },
+    {
+      "name": "auth-form",
+      "match": "any element the consuming page presents as a auth form",
+      "sourcePage": "/sign-in",
+      "sourceSel": "body > main > div > div > div > form:nth-of-type(1)",
+      "expectText": "Welcome to BallparkDon't",
+      "structure": {
+        "tags": [
+          "form"
+        ],
+        "maxDepth": 6
+      },
+      "css": [
+        {
+          "prop": "display",
+          "expect": [
+            "flex",
+            "inline-flex"
+          ]
+        },
+        {
+          "prop": "color",
+          "expect": "rgb(250, 250, 250)",
+          "tolerance": "deltaE<=3"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "name": "hero",
+      "sourcePage": "/",
+      "sourceSel": "body > main > div > section:nth-of-type(1)",
+      "asserts": []
+    },
+    {
+      "name": "dashboard-preview",
+      "sourcePage": "/",
+      "sourceSel": "body > main > div > section:nth-of-type(2)",
+      "asserts": []
+    },
+    {
+      "name": "faq",
+      "sourcePage": "/",
+      "sourceSel": "body > main > div > section:nth-of-type(5)",
+      "asserts": []
+    },
+    {
+      "name": "comparison-table",
+      "sourcePage": "/",
+      "sourceSel": "body > main > div > section:nth-of-type(4)",
+      "asserts": []
+    },
+    {
+      "name": "nav-header",
+      "sourcePage": "/",
+      "sourceSel": "body > main > header",
+      "asserts": []
+    },
+    {
+      "name": "footer",
+      "sourcePage": "/",
+      "sourceSel": "body > main > div > footer",
+      "asserts": []
+    },
+    {
+      "name": "pricing-cards",
+      "sourcePage": "/pricing",
+      "sourceSel": "body > main > main > div",
+      "asserts": []
+    },
+    {
+      "name": "directory-grid",
+      "sourcePage": "/directory",
+      "sourceSel": "body > main > div > div > div:nth-of-type(3)",
+      "asserts": []
+    }
+  ]
+}
